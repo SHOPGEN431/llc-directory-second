@@ -1,0 +1,476 @@
+{% extends "base.html" %}
+
+{% block content %}
+<!-- Hero Section -->
+<section class="bg-gradient-primary text-white py-5">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-8">
+                <h1 class="display-4 fw-bold mb-4">Complete LLC Formation Services</h1>
+                <p class="lead mb-4">Professional LLC formation with expert guidance, legal compliance, and ongoing support. Start your business journey with confidence.</p>
+                <div class="d-flex flex-wrap gap-3">
+                    <a href="#formation-form" class="btn btn-light btn-lg px-4 py-3 fw-semibold">
+                        <i class="fas fa-rocket me-2"></i>Start Formation
+                    </a>
+                    <a href="{{ url_for('pricing') }}" class="btn btn-outline-light btn-lg px-4 py-3 fw-semibold">
+                        <i class="fas fa-dollar-sign me-2"></i>View Pricing
+                    </a>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="text-center">
+                    <i class="fas fa-building fa-6x text-white-50"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- What's Included Section -->
+<section class="py-5">
+    <div class="container">
+        <div class="row text-center mb-5">
+            <div class="col-lg-8 mx-auto">
+                <h2 class="display-5 fw-bold mb-3">What's Included in Your LLC Formation</h2>
+                <p class="lead text-muted">Everything you need to get your business up and running legally and efficiently.</p>
+            </div>
+        </div>
+        <div class="row g-4">
+            <div class="col-lg-4 col-md-6">
+                <div class="card h-100 border-0 shadow-sm">
+                    <div class="card-body text-center p-4">
+                        <div class="feature-icon bg-primary bg-opacity-10 rounded-circle d-inline-flex align-items-center justify-content-center mb-3" style="width: 80px; height: 80px;">
+                            <i class="fas fa-file-contract fa-2x text-primary"></i>
+                        </div>
+                        <h5 class="card-title fw-bold">Articles of Organization</h5>
+                        <p class="card-text text-muted">Properly filed with your state's Secretary of State office to legally establish your LLC.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="card h-100 border-0 shadow-sm">
+                    <div class="card-body text-center p-4">
+                        <div class="feature-icon bg-success bg-opacity-10 rounded-circle d-inline-flex align-items-center justify-content-center mb-3" style="width: 80px; height: 80px;">
+                            <i class="fas fa-handshake fa-2x text-success"></i>
+                        </div>
+                        <h5 class="card-title fw-bold">Operating Agreement</h5>
+                        <p class="card-text text-muted">Customized document outlining ownership structure, management, and operating procedures.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="card h-100 border-0 shadow-sm">
+                    <div class="card-body text-center p-4">
+                        <div class="feature-icon bg-info bg-opacity-10 rounded-circle d-inline-flex align-items-center justify-content-center mb-3" style="width: 80px; height: 80px;">
+                            <i class="fas fa-id-card fa-2x text-info"></i>
+                        </div>
+                        <h5 class="card-title fw-bold">EIN Application</h5>
+                        <p class="card-text text-muted">Federal Employer Identification Number for tax purposes and business banking.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="card h-100 border-0 shadow-sm">
+                    <div class="card-body text-center p-4">
+                        <div class="feature-icon bg-warning bg-opacity-10 rounded-circle d-inline-flex align-items-center justify-content-center mb-3" style="width: 80px; height: 80px;">
+                            <i class="fas fa-shield-alt fa-2x text-warning"></i>
+                        </div>
+                        <h5 class="card-title fw-bold">Liability Protection</h5>
+                        <p class="card-text text-muted">Legal separation between personal and business assets to protect your personal finances.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="card h-100 border-0 shadow-sm">
+                    <div class="card-body text-center p-4">
+                        <div class="feature-icon bg-danger bg-opacity-10 rounded-circle d-inline-flex align-items-center justify-content-center mb-3" style="width: 80px; height: 80px;">
+                            <i class="fas fa-calculator fa-2x text-danger"></i>
+                        </div>
+                        <h5 class="card-title fw-bold">Tax Benefits</h5>
+                        <p class="card-text text-muted">Pass-through taxation and potential tax advantages for your business structure.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="card h-100 border-0 shadow-sm">
+                    <div class="card-body text-center p-4">
+                        <div class="feature-icon bg-secondary bg-opacity-10 rounded-circle d-inline-flex align-items-center justify-content-center mb-3" style="width: 80px; height: 80px;">
+                            <i class="fas fa-headset fa-2x text-secondary"></i>
+                        </div>
+                        <h5 class="card-title fw-bold">Ongoing Support</h5>
+                        <p class="card-text text-muted">Expert guidance for compliance, annual filings, and business growth questions.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Formation Form Section -->
+<section id="formation-form" class="bg-light py-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 mx-auto">
+                <div class="card border-0 shadow">
+                    <div class="card-header bg-primary text-white text-center py-4">
+                        <h3 class="mb-0 fw-bold">Start Your LLC Formation</h3>
+                        <p class="mb-0">Fill out the form below to begin your LLC formation process</p>
+                    </div>
+                    <div class="card-body p-4">
+                        <form id="llc-formation-form">
+                            <!-- Business Information -->
+                            <div class="row mb-4">
+                                <div class="col-12">
+                                    <h5 class="fw-bold mb-3 text-primary">Business Information</h5>
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <label for="business_name" class="form-label">Business Name *</label>
+                                    <input type="text" class="form-control" id="business_name" name="business_name" required>
+                                    <div class="form-text">Enter your desired LLC name</div>
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <label for="business_type" class="form-label">Business Type *</label>
+                                    <select class="form-select" id="business_type" name="business_type" required>
+                                        <option value="">Select business type</option>
+                                        <option value="consulting">Consulting</option>
+                                        <option value="retail">Retail</option>
+                                        <option value="technology">Technology</option>
+                                        <option value="real_estate">Real Estate</option>
+                                        <option value="healthcare">Healthcare</option>
+                                        <option value="restaurant">Restaurant</option>
+                                        <option value="manufacturing">Manufacturing</option>
+                                        <option value="other">Other</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <!-- Formation State -->
+                            <div class="row mb-4">
+                                <div class="col-12">
+                                    <h5 class="fw-bold mb-3 text-primary">Formation State</h5>
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <label for="formation_state" class="form-label">State of Formation *</label>
+                                    <select class="form-select" id="formation_state" name="formation_state" required>
+                                        <option value="">Select state</option>
+                                        <option value="alabama">Alabama</option>
+                                        <option value="alaska">Alaska</option>
+                                        <option value="arizona">Arizona</option>
+                                        <option value="arkansas">Arkansas</option>
+                                        <option value="california">California</option>
+                                        <option value="colorado">Colorado</option>
+                                        <option value="connecticut">Connecticut</option>
+                                        <option value="delaware">Delaware</option>
+                                        <option value="florida">Florida</option>
+                                        <option value="georgia">Georgia</option>
+                                        <option value="hawaii">Hawaii</option>
+                                        <option value="idaho">Idaho</option>
+                                        <option value="illinois">Illinois</option>
+                                        <option value="indiana">Indiana</option>
+                                        <option value="iowa">Iowa</option>
+                                        <option value="kansas">Kansas</option>
+                                        <option value="kentucky">Kentucky</option>
+                                        <option value="louisiana">Louisiana</option>
+                                        <option value="maine">Maine</option>
+                                        <option value="maryland">Maryland</option>
+                                        <option value="massachusetts">Massachusetts</option>
+                                        <option value="michigan">Michigan</option>
+                                        <option value="minnesota">Minnesota</option>
+                                        <option value="mississippi">Mississippi</option>
+                                        <option value="missouri">Missouri</option>
+                                        <option value="montana">Montana</option>
+                                        <option value="nebraska">Nebraska</option>
+                                        <option value="nevada">Nevada</option>
+                                        <option value="new-hampshire">New Hampshire</option>
+                                        <option value="new-jersey">New Jersey</option>
+                                        <option value="new-mexico">New Mexico</option>
+                                        <option value="new-york">New York</option>
+                                        <option value="north-carolina">North Carolina</option>
+                                        <option value="north-dakota">North Dakota</option>
+                                        <option value="ohio">Ohio</option>
+                                        <option value="oklahoma">Oklahoma</option>
+                                        <option value="oregon">Oregon</option>
+                                        <option value="pennsylvania">Pennsylvania</option>
+                                        <option value="rhode-island">Rhode Island</option>
+                                        <option value="south-carolina">South Carolina</option>
+                                        <option value="south-dakota">South Dakota</option>
+                                        <option value="tennessee">Tennessee</option>
+                                        <option value="texas">Texas</option>
+                                        <option value="utah">Utah</option>
+                                        <option value="vermont">Vermont</option>
+                                        <option value="virginia">Virginia</option>
+                                        <option value="washington">Washington</option>
+                                        <option value="west-virginia">West Virginia</option>
+                                        <option value="wisconsin">Wisconsin</option>
+                                        <option value="wyoming">Wyoming</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <label for="package_type" class="form-label">Service Package *</label>
+                                    <select class="form-select" id="package_type" name="package_type" required>
+                                        <option value="">Select package</option>
+                                        <option value="basic">Basic Package - $99 + state fees</option>
+                                        <option value="premium">Premium Package - $199 + state fees</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <!-- Owner Information -->
+                            <div class="row mb-4">
+                                <div class="col-12">
+                                    <h5 class="fw-bold mb-3 text-primary">Owner Information</h5>
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <label for="owner_first_name" class="form-label">First Name *</label>
+                                    <input type="text" class="form-control" id="owner_first_name" name="owner_first_name" required>
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <label for="owner_last_name" class="form-label">Last Name *</label>
+                                    <input type="text" class="form-control" id="owner_last_name" name="owner_last_name" required>
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <label for="owner_email" class="form-label">Email Address *</label>
+                                    <input type="email" class="form-control" id="owner_email" name="owner_email" required>
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <label for="owner_phone" class="form-label">Phone Number *</label>
+                                    <input type="tel" class="form-control" id="owner_phone" name="owner_phone" required>
+                                </div>
+                            </div>
+
+                            <!-- Business Address -->
+                            <div class="row mb-4">
+                                <div class="col-12">
+                                    <h5 class="fw-bold mb-3 text-primary">Business Address</h5>
+                                </div>
+                                <div class="col-12 mb-3">
+                                    <label for="business_address" class="form-label">Street Address *</label>
+                                    <input type="text" class="form-control" id="business_address" name="business_address" required>
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <label for="business_city" class="form-label">City *</label>
+                                    <input type="text" class="form-control" id="business_city" name="business_city" required>
+                                </div>
+                                <div class="col-md-3 mb-3">
+                                    <label for="business_state" class="form-label">State *</label>
+                                    <select class="form-select" id="business_state" name="business_state" required>
+                                        <option value="">State</option>
+                                        <!-- Same state options as above -->
+                                    </select>
+                                </div>
+                                <div class="col-md-3 mb-3">
+                                    <label for="business_zip" class="form-label">ZIP Code *</label>
+                                    <input type="text" class="form-control" id="business_zip" name="business_zip" required>
+                                </div>
+                            </div>
+
+                            <!-- Additional Services -->
+                            <div class="row mb-4">
+                                <div class="col-12">
+                                    <h5 class="fw-bold mb-3 text-primary">Additional Services</h5>
+                                </div>
+                                <div class="col-12">
+                                    <div class="form-check mb-2">
+                                        <input class="form-check-input" type="checkbox" id="expedited_filing" name="expedited_filing">
+                                        <label class="form-check-label" for="expedited_filing">
+                                            Expedited Filing (+$50) - Get your LLC formed in 24 hours
+                                        </label>
+                                    </div>
+                                    <div class="form-check mb-2">
+                                        <input class="form-check-input" type="checkbox" id="business_license_research" name="business_license_research">
+                                        <label class="form-check-label" for="business_license_research">
+                                            Business License Research (+$75) - Identify required licenses and permits
+                                        </label>
+                                    </div>
+                                    <div class="form-check mb-2">
+                                        <input class="form-check-input" type="checkbox" id="banking_assistance" name="banking_assistance">
+                                        <label class="form-check-label" for="banking_assistance">
+                                            Banking Assistance (+$25) - Help with business bank account setup
+                                        </label>
+                                    </div>
+                                    <div class="form-check mb-2">
+                                        <input class="form-check-input" type="checkbox" id="compliance_monitoring" name="compliance_monitoring">
+                                        <label class="form-check-label" for="compliance_monitoring">
+                                            Annual Compliance Monitoring (+$99/year) - Stay compliant with ongoing requirements
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Terms and Conditions -->
+                            <div class="row mb-4">
+                                <div class="col-12">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" id="terms_agreement" name="terms_agreement" required>
+                                        <label class="form-check-label" for="terms_agreement">
+                                            I agree to the <a href="#" data-bs-toggle="modal" data-bs-target="#termsModal">Terms of Service</a> and <a href="#" data-bs-toggle="modal" data-bs-target="#privacyModal">Privacy Policy</a> *
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Submit Button -->
+                            <div class="row">
+                                <div class="col-12 text-center">
+                                    <button type="submit" class="btn btn-primary btn-lg px-5 py-3 fw-semibold">
+                                        <i class="fas fa-rocket me-2"></i>Start LLC Formation
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- FAQ Section -->
+<section class="py-5">
+    <div class="container">
+        <div class="row text-center mb-5">
+            <div class="col-lg-8 mx-auto">
+                <h2 class="display-5 fw-bold mb-3">Frequently Asked Questions</h2>
+                <p class="lead text-muted">Get answers to common questions about LLC formation.</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-8 mx-auto">
+                <div class="accordion" id="faqAccordion">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="faq1">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse1">
+                                How long does LLC formation take?
+                            </button>
+                        </h2>
+                        <div id="collapse1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                Standard LLC formation typically takes 5-10 business days, depending on the state. With our expedited filing service, you can get your LLC formed in as little as 24 hours.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="faq2">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse2">
+                                What's the difference between Basic and Premium packages?
+                            </button>
+                        </h2>
+                        <div id="collapse2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                The Basic package includes LLC formation filing, Articles of Organization, Operating Agreement, and EIN application. The Premium package includes everything in Basic plus compliance monitoring, annual report filing, business license guidance, and priority support.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="faq3">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse3">
+                                Do I need an EIN for my LLC?
+                            </button>
+                        </h2>
+                        <div id="collapse3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                While not always required, an EIN (Employer Identification Number) is highly recommended for LLCs. It's needed for opening business bank accounts, hiring employees, and certain tax purposes.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="faq4">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse4">
+                                Can I form an LLC in a different state than where I live?
+                            </button>
+                        </h2>
+                        <div id="collapse4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                Yes, you can form an LLC in any state, regardless of where you live. However, you'll need to register as a foreign LLC in your home state if you do business there. Consider factors like taxes, fees, and ongoing requirements when choosing your formation state.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="faq5">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse5">
+                                What ongoing requirements does an LLC have?
+                            </button>
+                        </h2>
+                        <div id="collapse5" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                LLC requirements vary by state but typically include annual reports, state tax filings, and maintaining good standing. Our Premium package includes ongoing compliance monitoring to help you stay compliant.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA Section -->
+<section class="bg-primary text-white py-5">
+    <div class="container">
+        <div class="row text-center">
+            <div class="col-lg-8 mx-auto">
+                <h2 class="display-5 fw-bold mb-3">Ready to Form Your LLC?</h2>
+                <p class="lead mb-4">Join thousands of entrepreneurs who have successfully started their businesses with our expert LLC formation services.</p>
+                <a href="#formation-form" class="btn btn-light btn-lg px-5 py-3 fw-semibold">
+                    <i class="fas fa-rocket me-2"></i>Get Started Today
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Terms Modal -->
+<div class="modal fade" id="termsModal" tabindex="-1">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Terms of Service</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+                <h6>1. Service Description</h6>
+                <p>We provide LLC formation services including document preparation, filing with state authorities, and ongoing compliance support.</p>
+                
+                <h6>2. Fees and Payment</h6>
+                <p>Our fees are clearly stated and do not include state filing fees, which vary by state. Payment is required before services begin.</p>
+                
+                <h6>3. Client Responsibilities</h6>
+                <p>Clients must provide accurate information and maintain compliance with ongoing state requirements.</p>
+                
+                <h6>4. Limitation of Liability</h6>
+                <p>Our liability is limited to the amount paid for services. We are not responsible for business decisions or outcomes.</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Privacy Modal -->
+<div class="modal fade" id="privacyModal" tabindex="-1">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Privacy Policy</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+                <h6>Information We Collect</h6>
+                <p>We collect information you provide during the LLC formation process, including business and personal details.</p>
+                
+                <h6>How We Use Information</h6>
+                <p>We use your information to provide LLC formation services, communicate with you, and ensure compliance.</p>
+                
+                <h6>Information Sharing</h6>
+                <p>We do not sell your information. We may share it with state authorities as required for LLC formation.</p>
+                
+                <h6>Data Security</h6>
+                <p>We implement appropriate security measures to protect your personal and business information.</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

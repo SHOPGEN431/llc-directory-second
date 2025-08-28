@@ -15,3 +15,5 @@ for i, header in enumerate(headers):
 print(f'\nTotal columns: {len(headers)}')
 
 
+
+

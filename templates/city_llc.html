@@ -1,0 +1,254 @@
+{% extends "base.html" %}
+
+{% block content %}
+<!-- Hero Section -->
+<section class="hero-section bg-primary text-white py-5">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-8">
+                <h1 class="display-4 fw-bold mb-4">LLC Formation in {{ city_name }}, {{ state.abbr }}</h1>
+                <p class="lead mb-4">Start your business in {{ city_name }} with our expert LLC formation services. We'll help you navigate the legal requirements and get your business up and running quickly.</p>
+                <div class="d-flex flex-wrap gap-3">
+                    <a href="#formation-process" class="btn btn-light btn-lg">Get Started</a>
+                    <a href="#local-businesses" class="btn btn-outline-light btn-lg">View Local Businesses</a>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="text-center">
+                    <i class="fas fa-building fa-6x mb-3"></i>
+                    <h3>{{ city_name }}, {{ state.abbr }}</h3>
+                    <p class="mb-0">Formation Fee: ${{ state.formation_fee }}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- City Information Section -->
+<section class="py-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8">
+                <h2 class="mb-4">LLC Formation in {{ city_name }}, {{ state.name }}</h2>
+                <p class="lead">Starting a business in {{ city_name }}? Our comprehensive LLC formation services will help you establish your business with confidence and legal compliance.</p>
+                
+                <div class="row mt-5">
+                    <div class="col-md-6">
+                        <div class="card h-100 border-0 shadow-sm">
+                            <div class="card-body text-center">
+                                <i class="fas fa-file-contract fa-3x text-primary mb-3"></i>
+                                <h4>State Filing Fee</h4>
+                                <p class="h2 text-primary">${{ state.formation_fee }}</p>
+                                <p class="text-muted">One-time formation fee</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="card h-100 border-0 shadow-sm">
+                            <div class="card-body text-center">
+                                <i class="fas fa-calendar-alt fa-3x text-primary mb-3"></i>
+                                <h4>Annual Fee</h4>
+                                <p class="h2 text-primary">${{ state.annual_fee }}</p>
+                                <p class="text-muted">Annual report fee</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="card border-0 shadow-sm">
+                    <div class="card-body">
+                        <h4>Why Form an LLC in {{ city_name }}?</h4>
+                        <ul class="list-unstyled">
+                            <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Limited liability protection</li>
+                            <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Tax flexibility</li>
+                            <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Professional credibility</li>
+                            <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Easy management structure</li>
+                            <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Local business support</li>
+                        </ul>
+                        <a href="/llc-formation" class="btn btn-primary w-100">Start Formation Process</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Local Businesses Section -->
+<section id="local-businesses" class="py-5 bg-light">
+    <div class="container">
+        <h2 class="text-center mb-5">Local Businesses in {{ city_name }}, {{ state.abbr }}</h2>
+        
+        {% if businesses %}
+        <div class="row">
+            {% for business in businesses[:12] %}
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="card h-100 border-0 shadow-sm">
+                    <div class="card-body">
+                        <h5 class="card-title">{{ business.name }}</h5>
+                        {% if business.category %}
+                        <p class="text-muted mb-2">{{ business.category }}</p>
+                        {% endif %}
+                        {% if business.full_address %}
+                        <p class="mb-2"><i class="fas fa-map-marker-alt text-primary me-2"></i>{{ business.full_address }}</p>
+                        {% endif %}
+                        {% if business.phone %}
+                        <p class="mb-2"><i class="fas fa-phone text-primary me-2"></i>{{ business.phone }}</p>
+                        {% endif %}
+                        {% if business.rating %}
+                        <div class="mb-2">
+                            <span class="text-warning">
+                                {% for i in range(business.rating|int) %}
+                                <i class="fas fa-star"></i>
+                                {% endfor %}
+                            </span>
+                            <span class="text-muted ms-2">({{ business.reviews }} reviews)</span>
+                        </div>
+                        {% endif %}
+                        {% if business.description %}
+                        <p class="card-text small">{{ business.description[:100] }}{% if business.description|length > 100 %}...{% endif %}</p>
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+        
+        {% if businesses|length > 12 %}
+        <div class="text-center mt-4">
+            <p class="text-muted">Showing 12 of {{ businesses|length }} businesses</p>
+            <button class="btn btn-outline-primary" onclick="loadMoreBusinesses()">Load More</button>
+        </div>
+        {% endif %}
+        
+        {% else %}
+        <div class="text-center">
+            <i class="fas fa-building fa-4x text-muted mb-3"></i>
+            <h4>No Local Businesses Found</h4>
+            <p class="text-muted">We're working on adding more local business data for {{ city_name }}.</p>
+        </div>
+        {% endif %}
+    </div>
+</section>
+
+<!-- Formation Process Section -->
+<section id="formation-process" class="py-5">
+    <div class="container">
+        <h2 class="text-center mb-5">How to Form Your LLC in {{ city_name }}</h2>
+        
+        <div class="row">
+            <div class="col-lg-3 col-md-6 mb-4">
+                <div class="text-center">
+                    <div class="bg-primary text-white rounded-circle d-inline-flex align-items-center justify-content-center mb-3" style="width: 80px; height: 80px;">
+                        <span class="h3 mb-0">1</span>
+                    </div>
+                    <h5>Choose Your Package</h5>
+                    <p class="text-muted">Select from our Basic, Premium, or Enterprise LLC formation packages.</p>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 mb-4">
+                <div class="text-center">
+                    <div class="bg-primary text-white rounded-circle d-inline-flex align-items-center justify-content-center mb-3" style="width: 80px; height: 80px;">
+                        <span class="h3 mb-0">2</span>
+                    </div>
+                    <h5>Provide Information</h5>
+                    <p class="text-muted">Fill out our simple form with your business details and preferences.</p>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 mb-4">
+                <div class="text-center">
+                    <div class="bg-primary text-white rounded-circle d-inline-flex align-items-center justify-content-center mb-3" style="width: 80px; height: 80px;">
+                        <span class="h3 mb-0">3</span>
+                    </div>
+                    <h5>We File for You</h5>
+                    <p class="text-muted">Our experts handle all the paperwork and filing with the {{ state.name }} Secretary of State.</p>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 mb-4">
+                <div class="text-center">
+                    <div class="bg-primary text-white rounded-circle d-inline-flex align-items-center justify-content-center mb-3" style="width: 80px; height: 80px;">
+                        <span class="h3 mb-0">4</span>
+                    </div>
+                    <h5>Get Your Documents</h5>
+                    <p class="text-muted">Receive your LLC formation documents and start operating your business.</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="text-center mt-5">
+            <a href="/llc-formation" class="btn btn-primary btn-lg">Start Your LLC Formation</a>
+        </div>
+    </div>
+</section>
+
+<!-- FAQ Section -->
+<section class="py-5 bg-light">
+    <div class="container">
+        <h2 class="text-center mb-5">Frequently Asked Questions</h2>
+        
+        <div class="row justify-content-center">
+            <div class="col-lg-8">
+                <div class="accordion" id="faqAccordion">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="faq1">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse1">
+                                How long does it take to form an LLC in {{ state.name }}?
+                            </button>
+                        </h2>
+                        <div id="collapse1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                The processing time for LLC formation in {{ state.name }} typically takes 5-10 business days. We can expedite the process for an additional fee.
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="faq2">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse2">
+                                What documents do I need to form an LLC?
+                            </button>
+                        </h2>
+                        <div id="collapse2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                You'll need basic information like your business name, address, and member details. We'll guide you through the entire process and handle all the paperwork.
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="faq3">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse3">
+                                Do I need a local address in {{ city_name }}?
+                            </button>
+                        </h2>
+                        <div id="collapse3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                You can form an LLC in {{ state.name }} with an address from anywhere in the state. We can also help you set up a registered agent service if needed.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA Section -->
+<section class="py-5 bg-primary text-white">
+    <div class="container text-center">
+        <h2 class="mb-4">Ready to Start Your Business in {{ city_name }}?</h2>
+        <p class="lead mb-4">Join the local business community and take the first step toward your entrepreneurial dreams.</p>
+        <a href="/llc-formation" class="btn btn-light btn-lg me-3">Start Formation</a>
+        <a href="/contact" class="btn btn-outline-light btn-lg">Contact Us</a>
+    </div>
+</section>
+{% endblock %}
+
+{% block scripts %}
+<script>
+function loadMoreBusinesses() {
+    // This would be implemented with AJAX to load more businesses
+    alert('Loading more businesses...');
+}
+</script>
+{% endblock %}
