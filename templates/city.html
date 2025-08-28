@@ -1,0 +1,1019 @@
+{% extends "base.html" %}
+
+{% block title %}{{ total_count }} Local LLC services in {{ city }}, {{ state }} - LLC Directory{% endblock %}
+{% block meta_description %}Find local LLC services in {{ city }}, {{ state }}. Discover trusted LLC formation services in your area.{% endblock %}
+
+{% block content %}
+<!-- City Header -->
+<section class="bg-primary text-white py-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="{{ url_for('index') }}" class="text-white">Home</a></li>
+                        <li class="breadcrumb-item"><a href="{{ url_for('state_page', state_name=state.lower().replace(' ', '-')) }}" class="text-white">{{ state }}</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">{{ city }}</li>
+                    </ol>
+                </nav>
+                <h1 class="display-4 fw-bold">{{ city }}, {{ state }} LLC Services</h1>
+                <p class="lead">Discover {{ total_count }} local LLC services in {{ city }}, {{ state }}</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Business Listings -->
+<section class="py-5">
+    <div class="container">
+        <!-- Disclaimer Section -->
+        <div class="row mb-4">
+            <div class="col-12">
+                <div class="alert alert-info border-0 shadow-sm">
+                    <div class="d-flex align-items-start">
+                        <i class="fas fa-info-circle fa-lg text-info me-3 mt-1"></i>
+                        <div>
+                            <h6 class="alert-heading mb-2"><strong>Important Disclaimer</strong></h6>
+                            <p class="mb-2 small">Pricing and information may have changed. For the most accurate and up-to-date information, please check directly with each service provider's website.</p>
+                            <p class="mb-0 small"><strong>Affiliate Disclosure:</strong> We may earn commissions from qualifying purchases made through affiliate links on this page. This helps support our site at no additional cost to you.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Top 5 LLC Services Online Section -->
+        <div class="row mb-5">
+            <div class="col-12">
+                <div class="text-center mb-4">
+                    <h2 class="display-5 fw-bold text-primary mb-2">
+                        <i class="fas fa-crown text-warning me-3"></i>
+                        Top 5 LLC Services Online
+                        <i class="fas fa-crown text-warning ms-3"></i>
+                    </h2>
+                    <p class="lead text-muted">Compare the best LLC formation services and find the perfect fit for your business</p>
+                </div>
+                
+                <!-- 1st Place: Northwest Registered Agent - Featured -->
+                <div class="row mb-4">
+                    <div class="col-12">
+                        <div class="card border-0 shadow-lg position-relative overflow-hidden" style="background: linear-gradient(135deg, #fff9c4 0%, #fff59d 100%); border: 3px solid #ffc107 !important;">
+                            <div class="position-absolute top-0 end-0 p-3">
+                                <div class="bg-warning text-dark px-3 py-1 rounded-pill fw-bold">
+                                    <i class="fas fa-star me-1"></i>BEST CHOICE
+                                </div>
+                            </div>
+                            <div class="card-header bg-warning text-dark py-3">
+                                <div class="d-flex align-items-center justify-content-between">
+                                    <h4 class="mb-0">
+                                        <i class="fas fa-trophy text-warning me-2"></i>
+                                        #1 Northwest Registered Agent
+                                    </h4>
+                                    <div class="badge bg-success fs-6 px-3 py-2">$39 + state fee</div>
+                                </div>
+                            </div>
+                            <div class="card-body p-4">
+                                <div class="row">
+                                    <div class="col-md-8">
+                                        <p class="lead mb-3">Highly regarded for privacy protection and no upsells. Includes one year of Registered Agent service.</p>
+                                        
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <h6 class="text-success fw-bold">
+                                                    <i class="fas fa-check-circle me-2"></i>Pros:
+                                                </h6>
+                                                <ul class="list-unstyled">
+                                                    <li><i class="fas fa-check text-success me-2"></i>Superior privacy protection</li>
+                                                    <li><i class="fas fa-check text-success me-2"></i>No upsells or hidden fees</li>
+                                                    <li><i class="fas fa-check text-success me-2"></i>Includes 1 year Registered Agent</li>
+                                                    <li><i class="fas fa-check text-success me-2"></i>Excellent customer service</li>
+                                                </ul>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <h6 class="text-danger fw-bold">
+                                                    <i class="fas fa-times-circle me-2"></i>Cons:
+                                                </h6>
+                                                <ul class="list-unstyled">
+                                                    <li><i class="fas fa-times text-danger me-2"></i>Basic formation only</li>
+                                                    <li><i class="fas fa-times text-danger me-2"></i>Limited additional services</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4 text-center d-flex flex-column justify-content-center">
+                                        <div class="mb-3">
+                                            <div class="display-6 text-warning mb-2">
+                                                <i class="fas fa-award"></i>
+                                            </div>
+                                            <div class="badge bg-warning text-dark fs-6 px-3 py-2 mb-3">
+                                                <i class="fas fa-star me-1"></i>Editor's Choice
+                                            </div>
+                                        </div>
+                                        <a href="https://consumer-champion.org/LLCwebsite" target="_blank" rel="nofollow" class="btn btn-warning btn-lg fw-bold">
+                                            <i class="fas fa-rocket me-2"></i>Get Started Now
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Other Services Grid -->
+                <div class="row">
+                    
+                    <!-- 2nd Place: LegalZoom Basic -->
+                    <div class="col-md-6 mb-3">
+                        <div class="card h-100 border-0 shadow-sm border-secondary">
+                            <div class="card-header bg-secondary text-white">
+                                <h5 class="mb-0"><i class="fas fa-medal me-2"></i>#2 LegalZoom Basic</h5>
+                            </div>
+                            <div class="card-body">
+                                <p class="card-text">Well-established brand with name availability check and Articles of Organization filing.</p>
+                                <div class="mb-3">
+                                    <span class="badge bg-success">$0 + state fee</span>
+                                </div>
+                                <h6 class="text-success">Pros:</h6>
+                                <ul class="list-unstyled small">
+                                    <li><i class="fas fa-check text-success me-2"></i>Free basic formation</li>
+                                    <li><i class="fas fa-check text-success me-2"></i>Well-established brand</li>
+                                    <li><i class="fas fa-check text-success me-2"></i>Name availability check</li>
+                                    <li><i class="fas fa-check text-success me-2"></i>Articles of Organization filing</li>
+                                </ul>
+                                <h6 class="text-danger">Cons:</h6>
+                                <ul class="list-unstyled small">
+                                    <li><i class="fas fa-times text-danger me-2"></i>Very basic service</li>
+                                    <li><i class="fas fa-times text-danger me-2"></i>Aggressive upselling</li>
+                                </ul>
+                                                                                                                                   <a href="https://www.legalzoom.com/llc/llc-formation.html" target="_blank" rel="nofollow" class="btn btn-secondary btn-sm">Learn More</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- 3rd Place: Rocket Lawyer -->
+                    <div class="col-md-6 mb-3">
+                        <div class="card h-100 border-0 shadow-sm border-info">
+                            <div class="card-header bg-info text-white">
+                                <h5 class="mb-0"><i class="fas fa-award me-2"></i>#3 Rocket Lawyer</h5>
+                            </div>
+                            <div class="card-body">
+                                <p class="card-text">Subscription-based service with free formation for members and comprehensive legal document access.</p>
+                                <div class="mb-3">
+                                    <span class="badge bg-success">Free + state fee (with subscription)</span>
+                                </div>
+                                <h6 class="text-success">Pros:</h6>
+                                <ul class="list-unstyled small">
+                                    <li><i class="fas fa-check text-success me-2"></i>Free formation with subscription</li>
+                                    <li><i class="fas fa-check text-success me-2"></i>Full legal document library</li>
+                                    <li><i class="fas fa-check text-success me-2"></i>Ongoing legal support</li>
+                                    <li><i class="fas fa-check text-success me-2"></i>Discounts on other services</li>
+                                </ul>
+                                <h6 class="text-danger">Cons:</h6>
+                                <ul class="list-unstyled small">
+                                    <li><i class="fas fa-times text-danger me-2"></i>$239.88/year subscription</li>
+                                    <li><i class="fas fa-times text-danger me-2"></i>Requires ongoing commitment</li>
+                                </ul>
+                                                                                                                                   <a href="https://www.rocketlawyer.com/business/llc-formation" target="_blank" rel="nofollow" class="btn btn-info btn-sm">Learn More</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- 4th Place: LLC Attorney -->
+                    <div class="col-md-6 mb-3">
+                        <div class="card h-100 border-0 shadow-sm">
+                            <div class="card-body">
+                                <h5 class="card-title text-primary">LLC Attorney</h5>
+                                <p class="card-text">Professional legal services with multiple package options for different business needs.</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <span class="badge bg-success">Starting at $49 + state fee</span>
+                                                                         <a href="https://www.llcattorney.com/llc-formation" target="_blank" rel="nofollow" class="btn btn-outline-primary btn-sm">Learn More</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- 5th Place: LegalZoom Pro -->
+                    <div class="col-md-6 mb-3">
+                        <div class="card h-100 border-0 shadow-sm">
+                            <div class="card-body">
+                                <h5 class="card-title text-primary">LegalZoom Pro</h5>
+                                <p class="card-text">Comprehensive package with operating agreement, EIN, and legal templates library.</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <span class="badge bg-success">$249 + state fee</span>
+                                                                         <a href="https://www.legalzoom.com/llc/llc-formation.html" target="_blank" rel="nofollow" class="btn btn-outline-primary btn-sm">Learn More</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Local vs Online Options Section -->
+        <div class="row mb-5">
+            <div class="col-12">
+                <h2 class="mb-4">Local vs Online LLC Formation Options</h2>
+                <div class="row">
+                    <div class="col-md-6 mb-4">
+                        <div class="card h-100 border-primary">
+                            <div class="card-header bg-primary text-white">
+                                <h5 class="mb-0"><i class="fas fa-building me-2"></i>Local LLC Services</h5>
+                            </div>
+                            <div class="card-body">
+                                <h6 class="text-primary">Advantages:</h6>
+                                <ul class="list-unstyled">
+                                    <li><i class="fas fa-check text-success me-2"></i>Personal consultation and guidance</li>
+                                    <li><i class="fas fa-check text-success me-2"></i>Local expertise and knowledge</li>
+                                    <li><i class="fas fa-check text-success me-2"></i>Face-to-face meetings</li>
+                                    <li><i class="fas fa-check text-success me-2"></i>Ongoing local support</li>
+                                    <li><i class="fas fa-check text-success me-2"></i>Understanding of local regulations</li>
+                                </ul>
+                                <h6 class="text-primary mt-3">Considerations:</h6>
+                                <ul class="list-unstyled">
+                                    <li><i class="fas fa-info-circle text-info me-2"></i>Higher costs typically</li>
+                                    <li><i class="fas fa-info-circle text-info me-2"></i>Limited to business hours</li>
+                                    <li><i class="fas fa-info-circle text-info me-2"></i>Geographic limitations</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 mb-4">
+                        <div class="card h-100 border-success">
+                            <div class="card-header bg-success text-white">
+                                <h5 class="mb-0"><i class="fas fa-globe me-2"></i>Online LLC Services</h5>
+                            </div>
+                            <div class="card-body">
+                                <h6 class="text-success">Advantages:</h6>
+                                <ul class="list-unstyled">
+                                    <li><i class="fas fa-check text-success me-2"></i>Lower costs and competitive pricing</li>
+                                    <li><i class="fas fa-check text-success me-2"></i>24/7 availability and convenience</li>
+                                    <li><i class="fas fa-check text-success me-2"></i>Faster processing times</li>
+                                    <li><i class="fas fa-check text-success me-2"></i>Automated compliance tools</li>
+                                    <li><i class="fas fa-check text-success me-2"></i>Nationwide service availability</li>
+                                </ul>
+                                <h6 class="text-success mt-3">Considerations:</h6>
+                                <ul class="list-unstyled">
+                                    <li><i class="fas fa-info-circle text-info me-2"></i>Less personalized service</li>
+                                    <li><i class="fas fa-info-circle text-info me-2"></i>Limited local expertise</li>
+                                    <li><i class="fas fa-info-circle text-info me-2"></i>May lack ongoing support</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- State vs Delaware LLC Formation Comparison -->
+        <div class="row mb-5">
+            <div class="col-12">
+                <h2 class="mb-4">Forming in {{ state }} vs Delaware: Pros and Cons</h2>
+                <div class="row">
+                    <div class="col-md-6 mb-4">
+                        <div class="card h-100 border-info">
+                            <div class="card-header bg-info text-white">
+                                <h5 class="mb-0"><i class="fas fa-map-marker-alt me-2"></i>Forming in {{ state }}</h5>
+                            </div>
+                            <div class="card-body">
+                                <h6 class="text-info">Advantages:</h6>
+                                <ul class="list-unstyled">
+                                    <li><i class="fas fa-check text-success me-2"></i>Simpler compliance requirements</li>
+                                    <li><i class="fas fa-check text-success me-2"></i>No foreign qualification needed if operating locally</li>
+                                    <li><i class="fas fa-check text-success me-2"></i>Local legal and tax expertise readily available</li>
+                                    <li><i class="fas fa-check text-success me-2"></i>Direct access to state agencies and courts</li>
+                                    <li><i class="fas fa-check text-success me-2"></i>Lower annual compliance costs</li>
+                                    <li><i class="fas fa-check text-success me-2"></i>Familiarity with local business environment</li>
+                                </ul>
+                                <h6 class="text-info mt-3">Considerations:</h6>
+                                <ul class="list-unstyled">
+                                    <li><i class="fas fa-times text-danger me-2"></i>May have higher state taxes</li>
+                                    <li><i class="fas fa-times text-danger me-2"></i>Less favorable business laws in some cases</li>
+                                    <li><i class="fas fa-times text-danger me-2"></i>Limited privacy protections</li>
+                                    <li><i class="fas fa-times text-danger me-2"></i>May require foreign qualification if expanding</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 mb-4">
+                        <div class="card h-100 border-warning">
+                            <div class="card-header bg-warning text-dark">
+                                <h5 class="mb-0"><i class="fas fa-star me-2"></i>Forming in Delaware</h5>
+                            </div>
+                            <div class="card-body">
+                                <h6 class="text-warning">Advantages:</h6>
+                                <ul class="list-unstyled">
+                                    <li><i class="fas fa-check text-success me-2"></i>Business-friendly legal environment</li>
+                                    <li><i class="fas fa-check text-success me-2"></i>Strong privacy protections</li>
+                                    <li><i class="fas fa-check text-success me-2"></i>Specialized business courts</li>
+                                    <li><i class="fas fa-check text-success me-2"></i>No state corporate income tax for out-of-state operations</li>
+                                    <li><i class="fas fa-check text-success me-2"></i>Flexible corporate structure options</li>
+                                    <li><i class="fas fa-check text-success me-2"></i>Established legal precedent</li>
+                                </ul>
+                                <h6 class="text-warning mt-3">Considerations:</h6>
+                                <ul class="list-unstyled">
+                                    <li><i class="fas fa-times text-danger me-2"></i>Higher formation and annual fees</li>
+                                    <li><i class="fas fa-times text-danger me-2"></i>Foreign qualification required in home state</li>
+                                    <li><i class="fas fa-times text-danger me-2"></i>Additional compliance requirements</li>
+                                    <li><i class="fas fa-times text-danger me-2"></i>May need Delaware registered agent</li>
+                                    <li><i class="fas fa-times text-danger me-2"></i>More complex tax filing requirements</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row mt-4">
+                    <div class="col-12">
+                        <div class="alert alert-light border-0 shadow-sm">
+                            <div class="d-flex align-items-start">
+                                <i class="fas fa-lightbulb fa-lg text-warning me-3 mt-1"></i>
+                                <div>
+                                    <h6 class="alert-heading mb-2"><strong>When to Choose Each Option:</strong></h6>
+                                    <p class="mb-2 small"><strong>Choose {{ state }} if:</strong> You're a small business operating primarily in {{ state }}, want simpler compliance, or prefer local legal support.</p>
+                                    <p class="mb-0 small"><strong>Choose Delaware if:</strong> You're a larger business, need strong privacy protections, plan to raise venture capital, or want maximum legal flexibility.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+                 <!-- Calculator Disclaimer -->
+         <div class="row mb-4">
+             <div class="col-12">
+                 <div class="alert alert-warning border-0 shadow-sm">
+                     <div class="d-flex align-items-start">
+                         <i class="fas fa-exclamation-triangle fa-lg text-warning me-3 mt-1"></i>
+                         <div>
+                             <h6 class="alert-heading mb-2"><strong>Educational Purpose Disclaimer</strong></h6>
+                             <p class="mb-2 small">The calculators on this page are provided for educational purposes only. Results may be inaccurate and should not be considered as professional advice.</p>
+                             <p class="mb-2 small"><strong>Important:</strong> Always verify information with official sources:</p>
+                             <ul class="small mb-2">
+                                                                   <li><a href="https://www.irs.gov/" target="_blank" rel="nofollow" class="text-decoration-none">Official IRS Website</a></li>
+                                  <li><a href="https://www.sba.gov/" target="_blank" rel="nofollow" class="text-decoration-none">Small Business Administration (SBA)</a></li>
+                                 <li>Your state's official business registration website</li>
+                                 <li>Consult with qualified tax professionals and attorneys</li>
+                             </ul>
+                             <p class="mb-0 small"><strong>Note:</strong> Tax laws and fees change frequently. Always check with local resources for the most current information.</p>
+                         </div>
+                     </div>
+                 </div>
+             </div>
+         </div>
+
+         <!-- LLC Formation Cost Calculator Section -->
+         <div class="row mb-5">
+             <div class="col-12">
+                 <h2 class="mb-4">LLC Formation Cost Calculator</h2>
+                 <div class="card border-0 shadow-sm">
+                     <div class="card-body">
+                         <p class="text-muted mb-4">Calculate your estimated LLC formation costs including state fees and optional services. <strong>For educational purposes only.</strong></p>
+                        
+                        <form id="llcCalculator">
+                            <div class="row">
+                                <div class="col-md-6 mb-3">
+                                    <label for="stateSelect" class="form-label">State of Formation</label>
+                                    <select class="form-select" id="stateSelect" required>
+                                        <option value="">Select a state</option>
+                                        <option value="alabama">Alabama - $200</option>
+                                        <option value="alaska">Alaska - $250</option>
+                                        <option value="arizona">Arizona - $50</option>
+                                        <option value="arkansas">Arkansas - $45</option>
+                                        <option value="california">California - $70</option>
+                                        <option value="colorado">Colorado - $50</option>
+                                        <option value="connecticut">Connecticut - $120</option>
+                                        <option value="delaware">Delaware - $90</option>
+                                        <option value="florida">Florida - $125</option>
+                                        <option value="georgia">Georgia - $100</option>
+                                        <option value="hawaii">Hawaii - $50</option>
+                                        <option value="idaho">Idaho - $100</option>
+                                        <option value="illinois">Illinois - $150</option>
+                                        <option value="indiana">Indiana - $95</option>
+                                        <option value="iowa">Iowa - $50</option>
+                                        <option value="kansas">Kansas - $165</option>
+                                        <option value="kentucky">Kentucky - $50</option>
+                                        <option value="louisiana">Louisiana - $100</option>
+                                        <option value="maine">Maine - $175</option>
+                                        <option value="maryland">Maryland - $100</option>
+                                        <option value="massachusetts">Massachusetts - $500</option>
+                                        <option value="michigan">Michigan - $50</option>
+                                        <option value="minnesota">Minnesota - $155</option>
+                                        <option value="mississippi">Mississippi - $50</option>
+                                        <option value="missouri">Missouri - $50</option>
+                                        <option value="montana">Montana - $70</option>
+                                        <option value="nebraska">Nebraska - $100</option>
+                                        <option value="nevada">Nevada - $75</option>
+                                        <option value="new-hampshire">New Hampshire - $100</option>
+                                        <option value="new-jersey">New Jersey - $125</option>
+                                        <option value="new-mexico">New Mexico - $50</option>
+                                        <option value="new-york">New York - $200</option>
+                                        <option value="north-carolina">North Carolina - $125</option>
+                                        <option value="north-dakota">North Dakota - $135</option>
+                                        <option value="ohio">Ohio - $99</option>
+                                        <option value="oklahoma">Oklahoma - $100</option>
+                                        <option value="oregon">Oregon - $100</option>
+                                        <option value="pennsylvania">Pennsylvania - $125</option>
+                                        <option value="rhode-island">Rhode Island - $150</option>
+                                        <option value="south-carolina">South Carolina - $110</option>
+                                        <option value="south-dakota">South Dakota - $150</option>
+                                        <option value="tennessee">Tennessee - $300</option>
+                                        <option value="texas">Texas - $300</option>
+                                        <option value="utah">Utah - $70</option>
+                                        <option value="vermont">Vermont - $125</option>
+                                        <option value="virginia">Virginia - $100</option>
+                                        <option value="washington">Washington - $200</option>
+                                        <option value="west-virginia">West Virginia - $100</option>
+                                        <option value="wisconsin">Wisconsin - $130</option>
+                                        <option value="wyoming">Wyoming - $100</option>
+                                    </select>
+                                </div>
+                                
+                                <div class="col-md-6 mb-3">
+                                    <label class="form-label">Service Provider</label>
+                                    <select class="form-select" id="serviceProvider">
+                                        <option value="0">DIY (No service fee)</option>
+                                        <option value="39">Northwest Registered Agent ($39)</option>
+                                        <option value="0">LegalZoom Basic ($0)</option>
+                                        <option value="49">LLC Attorney ($49)</option>
+                                        <option value="249">LegalZoom Pro ($249)</option>
+                                    </select>
+                                </div>
+                            </div>
+                            
+                            <div class="row">
+                                <div class="col-12 mb-3">
+                                    <label class="form-label">Optional Add-ons</label>
+                                    <div class="row">
+                                        <div class="col-md-4 mb-2">
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" id="registeredAgent" value="125">
+                                                <label class="form-check-label" for="registeredAgent">
+                                                    Registered Agent ($125/year)
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4 mb-2">
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" id="ein" value="0">
+                                                <label class="form-check-label" for="ein">
+                                                    EIN Application (Free)
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4 mb-2">
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" id="operatingAgreement" value="50">
+                                                <label class="form-check-label" for="operatingAgreement">
+                                                    Operating Agreement ($50)
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="row">
+                                <div class="col-12">
+                                    <button type="button" class="btn btn-primary" onclick="calculateLLCCosts()">
+                                        <i class="fas fa-calculator me-2"></i>Calculate Total Cost
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+                        
+                        <div id="costResults" class="mt-4" style="display: none;">
+                            <div class="card bg-light border-0">
+                                <div class="card-body">
+                                    <h5 class="card-title text-primary">Estimated Total Cost Breakdown</h5>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <ul class="list-unstyled">
+                                                <li><strong>State Filing Fee:</strong> <span id="stateFee">$0</span></li>
+                                                <li><strong>Service Provider Fee:</strong> <span id="serviceFee">$0</span></li>
+                                                <li><strong>Optional Services:</strong> <span id="optionalFee">$0</span></li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="alert alert-success">
+                                                <h6 class="mb-1"><strong>Total Upfront Cost:</strong></h6>
+                                                <h4 class="mb-0" id="totalCost">$0</h4>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="mt-3">
+                                        <small class="text-muted">
+                                            <i class="fas fa-info-circle me-1"></i>
+                                            This is an estimate. Actual costs may vary. Some states have additional fees for expedited processing.
+                                        </small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- LLC vs. S-Corp Tax Savings Calculator Section -->
+        <div class="row mb-5">
+            <div class="col-12">
+                <h2 class="mb-4">LLC vs. S-Corp Tax Savings Calculator</h2>
+                <div class="card border-0 shadow-sm">
+                    <div class="card-body">
+                                                 <p class="text-muted mb-4">Compare tax obligations between LLC default taxation and S-Corp election to see potential savings. <strong>For educational purposes only.</strong></p>
+                        
+                        <form id="taxCalculator">
+                            <div class="row">
+                                <div class="col-md-4 mb-3">
+                                    <label for="businessProfit" class="form-label">Annual Business Profit</label>
+                                    <div class="input-group">
+                                        <span class="input-group-text">$</span>
+                                        <input type="number" class="form-control" id="businessProfit" placeholder="100000" min="0" step="1000" required>
+                                    </div>
+                                    <small class="text-muted">Total business income minus expenses</small>
+                                </div>
+                                
+                                <div class="col-md-4 mb-3">
+                                    <label for="plannedSalary" class="form-label">Planned Salary (S-Corp)</label>
+                                    <div class="input-group">
+                                        <span class="input-group-text">$</span>
+                                        <input type="number" class="form-control" id="plannedSalary" placeholder="50000" min="0" step="1000" required>
+                                    </div>
+                                    <small class="text-muted">Reasonable salary you'll pay yourself</small>
+                                </div>
+                                
+                                <div class="col-md-4 mb-3">
+                                    <label for="taxState" class="form-label">State of Operation</label>
+                                    <select class="form-select" id="taxState" required>
+                                        <option value="">Select a state</option>
+                                        <option value="alabama">Alabama - 5%</option>
+                                        <option value="alaska">Alaska - 0%</option>
+                                        <option value="arizona">Arizona - 2.5%</option>
+                                        <option value="arkansas">Arkansas - 5.5%</option>
+                                        <option value="california">California - 13.3%</option>
+                                        <option value="colorado">Colorado - 4.4%</option>
+                                        <option value="connecticut">Connecticut - 6.99%</option>
+                                        <option value="delaware">Delaware - 6.6%</option>
+                                        <option value="florida">Florida - 0%</option>
+                                        <option value="georgia">Georgia - 5.75%</option>
+                                        <option value="hawaii">Hawaii - 11%</option>
+                                        <option value="idaho">Idaho - 5.8%</option>
+                                        <option value="illinois">Illinois - 4.95%</option>
+                                        <option value="indiana">Indiana - 3.23%</option>
+                                        <option value="iowa">Iowa - 5.7%</option>
+                                        <option value="kansas">Kansas - 5.7%</option>
+                                        <option value="kentucky">Kentucky - 5%</option>
+                                        <option value="louisiana">Louisiana - 4.25%</option>
+                                        <option value="maine">Maine - 7.15%</option>
+                                        <option value="maryland">Maryland - 5.75%</option>
+                                        <option value="massachusetts">Massachusetts - 5%</option>
+                                        <option value="michigan">Michigan - 4.25%</option>
+                                        <option value="minnesota">Minnesota - 9.85%</option>
+                                        <option value="mississippi">Mississippi - 5%</option>
+                                        <option value="missouri">Missouri - 4.95%</option>
+                                        <option value="montana">Montana - 6.75%</option>
+                                        <option value="nebraska">Nebraska - 6.84%</option>
+                                        <option value="nevada">Nevada - 0%</option>
+                                        <option value="new-hampshire">New Hampshire - 0%</option>
+                                        <option value="new-jersey">New Jersey - 10.75%</option>
+                                        <option value="new-mexico">New Mexico - 5.9%</option>
+                                        <option value="new-york">New York - 10.9%</option>
+                                        <option value="north-carolina">North Carolina - 4.99%</option>
+                                        <option value="north-dakota">North Dakota - 2.9%</option>
+                                        <option value="ohio">Ohio - 3.99%</option>
+                                        <option value="oklahoma">Oklahoma - 4.75%</option>
+                                        <option value="oregon">Oregon - 9.9%</option>
+                                        <option value="pennsylvania">Pennsylvania - 3.07%</option>
+                                        <option value="rhode-island">Rhode Island - 5.99%</option>
+                                        <option value="south-carolina">South Carolina - 7%</option>
+                                        <option value="south-dakota">South Dakota - 0%</option>
+                                        <option value="tennessee">Tennessee - 0%</option>
+                                        <option value="texas">Texas - 0%</option>
+                                        <option value="utah">Utah - 4.85%</option>
+                                        <option value="vermont">Vermont - 8.75%</option>
+                                        <option value="virginia">Virginia - 5.75%</option>
+                                        <option value="washington">Washington - 0%</option>
+                                        <option value="west-virginia">West Virginia - 6.5%</option>
+                                        <option value="wisconsin">Wisconsin - 7.65%</option>
+                                        <option value="wyoming">Wyoming - 0%</option>
+                                    </select>
+                                </div>
+                            </div>
+                            
+                            <div class="row">
+                                <div class="col-12">
+                                    <button type="button" class="btn btn-primary" onclick="calculateTaxSavings()">
+                                        <i class="fas fa-calculator me-2"></i>Calculate Tax Comparison
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+                        
+                        <div id="taxResults" class="mt-4" style="display: none;">
+                            <div class="card bg-light border-0">
+                                <div class="card-body">
+                                    <h5 class="card-title text-primary">Tax Comparison Results</h5>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="card border-primary mb-3">
+                                                <div class="card-header bg-primary text-white">
+                                                    <h6 class="mb-0"><i class="fas fa-building me-2"></i>LLC (Default Taxation)</h6>
+                                                </div>
+                                                <div class="card-body">
+                                                    <ul class="list-unstyled">
+                                                        <li><strong>Self-Employment Tax:</strong> <span id="llcSE">$0</span></li>
+                                                        <li><strong>Federal Income Tax:</strong> <span id="llcFederal">$0</span></li>
+                                                        <li><strong>State Income Tax:</strong> <span id="llcState">$0</span></li>
+                                                        <li class="border-top pt-2"><strong>Total Tax:</strong> <span id="llcTotal" class="text-primary fw-bold">$0</span></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="card border-success mb-3">
+                                                <div class="card-header bg-success text-white">
+                                                    <h6 class="mb-0"><i class="fas fa-chart-line me-2"></i>S-Corp Election</h6>
+                                                </div>
+                                                <div class="card-body">
+                                                    <ul class="list-unstyled">
+                                                        <li><strong>Payroll Tax (Salary):</strong> <span id="scorpPayroll">$0</span></li>
+                                                        <li><strong>Federal Income Tax:</strong> <span id="scorpFederal">$0</span></li>
+                                                        <li><strong>State Income Tax:</strong> <span id="scorpState">$0</span></li>
+                                                        <li class="border-top pt-2"><strong>Total Tax:</strong> <span id="scorpTotal" class="text-success fw-bold">$0</span></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <div class="alert alert-info">
+                                                <h6 class="mb-2"><strong>Potential Annual Savings:</strong></h6>
+                                                <h4 class="mb-0" id="taxSavings">$0</h4>
+                                                <small class="text-muted">This represents potential tax savings by electing S-Corp status</small>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="mt-3">
+                                        <small class="text-muted">
+                                            <i class="fas fa-info-circle me-1"></i>
+                                            <strong>Important Notes:</strong> This is an estimate based on current tax rates. S-Corp election requires reasonable salary, additional compliance costs (~$500-1000/year), and may not be beneficial for all businesses. Consult with a tax professional for your specific situation.
+                                        </small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Foreign Qualification Cost Calculator Section -->
+        <div class="row mb-5">
+            <div class="col-12">
+                <h2 class="mb-4">Foreign Qualification Cost Calculator</h2>
+                <div class="card border-0 shadow-sm">
+                    <div class="card-body">
+                                                 <p class="text-muted mb-4">Calculate the costs of expanding your LLC to do business in additional states through foreign qualification. <strong>For educational purposes only.</strong></p>
+                        
+                        <form id="foreignQualCalculator">
+                            <div class="row">
+                                <div class="col-md-6 mb-3">
+                                    <label for="homeState" class="form-label">Home State (Current LLC State)</label>
+                                    <select class="form-select" id="homeState" required>
+                                        <option value="">Select your home state</option>
+                                        <option value="alabama">Alabama</option>
+                                        <option value="alaska">Alaska</option>
+                                        <option value="arizona">Arizona</option>
+                                        <option value="arkansas">Arkansas</option>
+                                        <option value="california">California</option>
+                                        <option value="colorado">Colorado</option>
+                                        <option value="connecticut">Connecticut</option>
+                                        <option value="delaware">Delaware</option>
+                                        <option value="florida">Florida</option>
+                                        <option value="georgia">Georgia</option>
+                                        <option value="hawaii">Hawaii</option>
+                                        <option value="idaho">Idaho</option>
+                                        <option value="illinois">Illinois</option>
+                                        <option value="indiana">Indiana</option>
+                                        <option value="iowa">Iowa</option>
+                                        <option value="kansas">Kansas</option>
+                                        <option value="kentucky">Kentucky</option>
+                                        <option value="louisiana">Louisiana</option>
+                                        <option value="maine">Maine</option>
+                                        <option value="maryland">Maryland</option>
+                                        <option value="massachusetts">Massachusetts</option>
+                                        <option value="michigan">Michigan</option>
+                                        <option value="minnesota">Minnesota</option>
+                                        <option value="mississippi">Mississippi</option>
+                                        <option value="missouri">Missouri</option>
+                                        <option value="montana">Montana</option>
+                                        <option value="nebraska">Nebraska</option>
+                                        <option value="nevada">Nevada</option>
+                                        <option value="new-hampshire">New Hampshire</option>
+                                        <option value="new-jersey">New Jersey</option>
+                                        <option value="new-mexico">New Mexico</option>
+                                        <option value="new-york">New York</option>
+                                        <option value="north-carolina">North Carolina</option>
+                                        <option value="north-dakota">North Dakota</option>
+                                        <option value="ohio">Ohio</option>
+                                        <option value="oklahoma">Oklahoma</option>
+                                        <option value="oregon">Oregon</option>
+                                        <option value="pennsylvania">Pennsylvania</option>
+                                        <option value="rhode-island">Rhode Island</option>
+                                        <option value="south-carolina">South Carolina</option>
+                                        <option value="south-dakota">South Dakota</option>
+                                        <option value="tennessee">Tennessee</option>
+                                        <option value="texas">Texas</option>
+                                        <option value="utah">Utah</option>
+                                        <option value="vermont">Vermont</option>
+                                        <option value="virginia">Virginia</option>
+                                        <option value="washington">Washington</option>
+                                        <option value="west-virginia">West Virginia</option>
+                                        <option value="wisconsin">Wisconsin</option>
+                                        <option value="wyoming">Wyoming</option>
+                                    </select>
+                                </div>
+                                
+                                <div class="col-md-6 mb-3">
+                                    <label for="targetStates" class="form-label">Target States (Select multiple)</label>
+                                    <select class="form-select" id="targetStates" multiple size="6" required>
+                                        <option value="alabama">Alabama - $150</option>
+                                        <option value="alaska">Alaska - $350</option>
+                                        <option value="arizona">Arizona - $200</option>
+                                        <option value="arkansas">Arkansas - $300</option>
+                                        <option value="california">California - $150</option>
+                                        <option value="colorado">Colorado - $100</option>
+                                        <option value="connecticut">Connecticut - $120</option>
+                                        <option value="delaware">Delaware - $200</option>
+                                        <option value="florida">Florida - $125</option>
+                                        <option value="georgia">Georgia - $225</option>
+                                        <option value="hawaii">Hawaii - $50</option>
+                                        <option value="idaho">Idaho - $100</option>
+                                        <option value="illinois">Illinois - $150</option>
+                                        <option value="indiana">Indiana - $90</option>
+                                        <option value="iowa">Iowa - $50</option>
+                                        <option value="kansas">Kansas - $165</option>
+                                        <option value="kentucky">Kentucky - $50</option>
+                                        <option value="louisiana">Louisiana - $150</option>
+                                        <option value="maine">Maine - $175</option>
+                                        <option value="maryland">Maryland - $100</option>
+                                        <option value="massachusetts">Massachusetts - $500</option>
+                                        <option value="michigan">Michigan - $50</option>
+                                        <option value="minnesota">Minnesota - $155</option>
+                                        <option value="mississippi">Mississippi - $250</option>
+                                        <option value="missouri">Missouri - $50</option>
+                                        <option value="montana">Montana - $70</option>
+                                        <option value="nebraska">Nebraska - $100</option>
+                                        <option value="nevada">Nevada - $200</option>
+                                        <option value="new-hampshire">New Hampshire - $100</option>
+                                        <option value="new-jersey">New Jersey - $125</option>
+                                        <option value="new-mexico">New Mexico - $100</option>
+                                        <option value="new-york">New York - $250</option>
+                                        <option value="north-carolina">North Carolina - $250</option>
+                                        <option value="north-dakota">North Dakota - $135</option>
+                                        <option value="ohio">Ohio - $99</option>
+                                        <option value="oklahoma">Oklahoma - $300</option>
+                                        <option value="oregon">Oregon - $275</option>
+                                        <option value="pennsylvania">Pennsylvania - $250</option>
+                                        <option value="rhode-island">Rhode Island - $150</option>
+                                        <option value="south-carolina">South Carolina - $110</option>
+                                        <option value="south-dakota">South Dakota - $150</option>
+                                        <option value="tennessee">Tennessee - $300</option>
+                                        <option value="texas">Texas - $750</option>
+                                        <option value="utah">Utah - $70</option>
+                                        <option value="vermont">Vermont - $125</option>
+                                        <option value="virginia">Virginia - $100</option>
+                                        <option value="washington">Washington - $180</option>
+                                        <option value="west-virginia">West Virginia - $150</option>
+                                        <option value="wisconsin">Wisconsin - $100</option>
+                                        <option value="wyoming">Wyoming - $100</option>
+                                    </select>
+                                    <small class="text-muted">Hold Ctrl (or Cmd on Mac) to select multiple states</small>
+                                </div>
+                            </div>
+                            
+                            <div class="row">
+                                <div class="col-12 mb-3">
+                                    <label class="form-label">Additional Services</label>
+                                    <div class="row">
+                                        <div class="col-md-4 mb-2">
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" id="certificateOfGoodStanding" value="50">
+                                                <label class="form-check-label" for="certificateOfGoodStanding">
+                                                    Certificate of Good Standing ($50 per state)
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4 mb-2">
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" id="expeditedFiling" value="100">
+                                                <label class="form-check-label" for="expeditedFiling">
+                                                    Expedited Filing ($100 per state)
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4 mb-2">
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" id="complianceMonitoring" value="200">
+                                                <label class="form-check-label" for="complianceMonitoring">
+                                                    Annual Compliance Monitoring ($200/year per state)
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="row">
+                                <div class="col-12">
+                                    <button type="button" class="btn btn-primary" onclick="calculateForeignQualCosts()">
+                                        <i class="fas fa-calculator me-2"></i>Calculate Foreign Qualification Costs
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+                        
+                        <div id="foreignQualResults" class="mt-4" style="display: none;">
+                            <div class="card bg-light border-0">
+                                <div class="card-body">
+                                    <h5 class="card-title text-primary">Foreign Qualification Cost Breakdown</h5>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <ul class="list-unstyled">
+                                                <li><strong>Foreign Qualification Fees:</strong> <span id="qualFees">$0</span></li>
+                                                <li><strong>Registered Agent Fees:</strong> <span id="agentFees">$0</span></li>
+                                                <li><strong>Additional Services:</strong> <span id="additionalFees">$0</span></li>
+                                                <li><strong>Annual Compliance:</strong> <span id="annualCompliance">$0</span></li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="alert alert-success">
+                                                <h6 class="mb-1"><strong>Total Upfront Cost:</strong></h6>
+                                                <h4 class="mb-0" id="totalForeignCost">$0</h4>
+                                                <small class="text-muted">Plus annual registered agent fees</small>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="row mt-3">
+                                        <div class="col-12">
+                                            <div class="alert alert-info">
+                                                <h6 class="mb-2"><strong>Selected Target States:</strong></h6>
+                                                <div id="selectedStatesList" class="small"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="mt-3">
+                                        <small class="text-muted">
+                                            <i class="fas fa-info-circle me-1"></i>
+                                            <strong>Important Notes:</strong> Foreign qualification costs vary by state. Some states have additional requirements like publishing notices or obtaining local licenses. Annual registered agent fees typically range from $50-300 per state. Consult with a business attorney for specific requirements in your target states.
+                                        </small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row mb-4">
+            <div class="col-12">
+                <h2>All LLC Services in {{ city }}, {{ state }}</h2>
+                <p class="text-muted">Showing {{ businesses|length }} LLC services</p>
+            </div>
+        </div>
+
+        <div class="row">
+            {% if businesses %}
+                {% for business in businesses %}
+                <div class="col-lg-6 col-xl-4 mb-4">
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-body">
+                            <h5 class="card-title">{{ business.name }}</h5>
+                            <p class="card-text text-muted">{{ business.category }}</p>
+                            
+                            <div class="mb-3">
+                                {% if business.rating %}
+                                <div class="d-flex align-items-center mb-2">
+                                    <div class="text-warning me-2">
+                                        {% for i in range(5) %}
+                                            {% if i < business.rating|int %}
+                                            <i class="fas fa-star"></i>
+                                            {% else %}
+                                            <i class="far fa-star"></i>
+                                            {% endif %}
+                                        {% endfor %}
+                                    </div>
+                                    <span class="text-muted">{{ business.rating }}/5</span>
+                                    {% if business.reviews %}
+                                    <span class="text-muted ms-2">({{ business.reviews }} reviews)</span>
+                                    {% endif %}
+                                </div>
+                                {% endif %}
+                            </div>
+                            
+                            <div class="mb-3">
+                                <p class="mb-1">
+                                    <i class="fas fa-map-marker-alt text-primary me-2"></i>
+                                    {{ business.city }}, {{ business.state }}
+                                </p>
+                                {% if business.full_address %}
+                                <p class="mb-1">
+                                    <i class="fas fa-location-dot text-primary me-2"></i>
+                                    {{ business.full_address }}
+                                </p>
+                                {% endif %}
+                                {% if business.phone %}
+                                <p class="mb-1">
+                                    <i class="fas fa-phone text-primary me-2"></i>
+                                    <a href="tel:{{ business.phone }}" class="text-decoration-none">{{ business.phone }}</a>
+                                </p>
+                                {% endif %}
+                                {% if business.site %}
+                                <p class="mb-1">
+                                    <i class="fas fa-globe text-primary me-2"></i>
+                                                                         <a href="{{ business.site }}" target="_blank" rel="nofollow" class="text-decoration-none">Visit Website</a>
+                                </p>
+                                {% endif %}
+                            </div>
+                            
+                            {% if business.about %}
+                            <div class="mb-3">
+                                <p class="card-text small text-muted">{{ business.about[:150] }}{% if business.about|length > 150 %}...{% endif %}</p>
+                            </div>
+                            {% endif %}
+                            
+                            <div class="d-flex justify-content-between align-items-center">
+                                {% if business.site %}
+                                                                 <a href="{{ business.site }}" target="_blank" rel="nofollow" class="btn btn-primary btn-sm">
+                                     <i class="fas fa-external-link-alt me-1"></i>Visit Site
+                                 </a>
+                                {% endif %}
+                                {% if business.phone %}
+                                <a href="tel:{{ business.phone }}" class="btn btn-outline-primary btn-sm">
+                                    <i class="fas fa-phone me-1"></i>Call Now
+                                </a>
+                                {% endif %}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            {% else %}
+                <div class="col-12 text-center py-5">
+                    <i class="fas fa-building fa-3x text-muted mb-3"></i>
+                    <h3>No LLC services found in {{ city }}, {{ state }}</h3>
+                    <p class="text-muted">Try browsing other cities in {{ state }} or use the search function.</p>
+                    <a href="{{ url_for('state_page', state_name=state.lower().replace(' ', '-')) }}" class="btn btn-primary">
+                        View All {{ state }} LLC Services
+                    </a>
+                </div>
+            {% endif %}
+        </div>
+    </div>
+</section>
+
+<!-- Related Cities Section -->
+{% if businesses %}
+<section class="bg-light py-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <h3 class="mb-4">Other Cities in {{ state }}</h3>
+                <div class="row">
+                    {% set city_count = 0 %}
+                    {% for other_city in all_cities %}
+                        {% if other_city.city != city and other_city.state == state and city_count < 25 %}
+                            {% set city_count = city_count + 1 %}
+                            <div class="col-md-4 col-sm-6 mb-3">
+                                <a href="{{ url_for('city_page', state_name=state.lower().replace(' ', '-'), city_name=other_city.city.lower().replace(' ', '-')) }}" class="text-decoration-none">
+                                    <div class="card text-center h-100 border-0 shadow-sm">
+                                        <div class="card-body">
+                                            <i class="fas fa-city fa-2x text-primary mb-2"></i>
+                                            <h6 class="card-title">{{ other_city.city }}</h6>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        {% endif %}
+                    {% endfor %}
+                </div>
+                {% if all_cities|length > 26 %}
+                <div class="text-center mt-4">
+                    <a href="{{ url_for('all_locations') }}#cities" class="btn btn-outline-primary">
+                        <i class="fas fa-list me-1"></i>
+                        View All Cities in {{ state }}
+                    </a>
+                </div>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</section>
+{% endif %}
+{% endblock %}

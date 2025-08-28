@@ -1,0 +1,326 @@
+{% extends "base.html" %}
+
+{% block title %}LLC Formation Guide - Step by Step Instructions{% endblock %}
+{% block meta_description %}Complete guide to forming an LLC. Learn the step-by-step process, requirements, and best practices for LLC formation.{% endblock %}
+
+{% block content %}
+<!-- Header -->
+<section class="bg-primary text-white py-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="{{ url_for('index') }}" class="text-white">Home</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">LLC Formation Guide</li>
+                    </ol>
+                </nav>
+                <h1 class="display-4 fw-bold">LLC Formation Guide</h1>
+                <p class="lead">Complete step-by-step guide to forming your Limited Liability Company</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Main Content -->
+<section class="py-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 mx-auto">
+                <!-- Introduction -->
+                <div class="mb-5">
+                    <div class="alert alert-info">
+                        <h4><i class="fas fa-info-circle me-2"></i>What is an LLC?</h4>
+                        <p class="mb-0">A Limited Liability Company (LLC) is a business structure that combines the liability protection of a corporation with the tax benefits and flexibility of a partnership. It's one of the most popular business structures for small businesses and entrepreneurs.</p>
+                    </div>
+                </div>
+
+                <!-- Step-by-Step Guide -->
+                <div class="mb-5">
+                    <h2 class="mb-4">Step-by-Step LLC Formation Process</h2>
+                    
+                    <!-- Step 1 -->
+                    <div class="card mb-4 border-0 shadow-sm">
+                        <div class="card-header bg-primary text-white">
+                            <h3 class="mb-0">
+                                <span class="badge bg-light text-primary me-3">1</span>
+                                Choose Your State of Formation
+                            </h3>
+                        </div>
+                        <div class="card-body">
+                            <p>Decide where to form your LLC. You can form in:</p>
+                            <ul>
+                                <li><strong>Your home state:</strong> If you'll be doing business primarily in one state</li>
+                                <li><strong>Delaware:</strong> For businesses that want maximum legal protection and flexibility</li>
+                                <li><strong>Wyoming:</strong> For privacy and tax benefits</li>
+                            </ul>
+                            <div class="alert alert-warning">
+                                <strong>Important:</strong> If you form in a different state than where you operate, you'll need to register as a "foreign LLC" in your home state.
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Step 2 -->
+                    <div class="card mb-4 border-0 shadow-sm">
+                        <div class="card-header bg-success text-white">
+                            <h3 class="mb-0">
+                                <span class="badge bg-light text-success me-3">2</span>
+                                Choose Your LLC Name
+                            </h3>
+                        </div>
+                        <div class="card-body">
+                            <p>Your LLC name must be unique and comply with state requirements:</p>
+                            <ul>
+                                <li>Must include "LLC," "L.L.C.," or "Limited Liability Company"</li>
+                                <li>Cannot be the same as existing businesses in your state</li>
+                                <li>Avoid restricted words (Bank, Insurance, etc.)</li>
+                                <li>Check availability with your state's business registry</li>
+                            </ul>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <h6 class="text-success">Good Examples:</h6>
+                                    <ul class="small">
+                                        <li>Smith Consulting LLC</li>
+                                        <li>ABC Services, L.L.C.</li>
+                                        <li>Tech Solutions Limited Liability Company</li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-6">
+                                    <h6 class="text-danger">Avoid:</h6>
+                                    <ul class="small">
+                                        <li>Generic names like "Business LLC"</li>
+                                        <li>Names that are too similar to existing businesses</li>
+                                        <li>Names with restricted words</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Step 3 -->
+                    <div class="card mb-4 border-0 shadow-sm">
+                        <div class="card-header bg-info text-white">
+                            <h3 class="mb-0">
+                                <span class="badge bg-light text-info me-3">3</span>
+                                Appoint a Registered Agent
+                            </h3>
+                        </div>
+                        <div class="card-body">
+                            <p>A registered agent receives legal documents on behalf of your LLC:</p>
+                            <ul>
+                                <li>Must have a physical address in your formation state</li>
+                                <li>Must be available during business hours</li>
+                                <li>Can be yourself, a business partner, or a professional service</li>
+                                <li>Many LLC formation services include registered agent service</li>
+                            </ul>
+                            <div class="alert alert-info">
+                                <strong>Tip:</strong> Professional registered agent services offer privacy protection and ensure you never miss important legal documents.
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Step 4 -->
+                    <div class="card mb-4 border-0 shadow-sm">
+                        <div class="card-header bg-warning text-dark">
+                            <h3 class="mb-0">
+                                <span class="badge bg-light text-warning me-3">4</span>
+                                File Articles of Organization
+                            </h3>
+                        </div>
+                        <div class="card-body">
+                            <p>This is the official document that creates your LLC:</p>
+                            <ul>
+                                <li>File with your state's business registration office</li>
+                                <li>Include basic information about your LLC</li>
+                                <li>Pay the required filing fee (varies by state)</li>
+                                <li>Processing time varies (1-10 business days)</li>
+                            </ul>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <h6>Required Information:</h6>
+                                    <ul class="small">
+                                        <li>LLC name</li>
+                                        <li>Registered agent information</li>
+                                        <li>Business purpose (optional in some states)</li>
+                                        <li>Management structure</li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-6">
+                                    <h6>Filing Fees (Examples):</h6>
+                                    <ul class="small">
+                                        <li>Delaware: $90</li>
+                                        <li>California: $70</li>
+                                        <li>Texas: $300</li>
+                                        <li>New York: $200</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Step 5 -->
+                    <div class="card mb-4 border-0 shadow-sm">
+                        <div class="card-header bg-danger text-white">
+                            <h3 class="mb-0">
+                                <span class="badge bg-light text-danger me-3">5</span>
+                                Create an Operating Agreement
+                            </h3>
+                        </div>
+                        <div class="card-body">
+                            <p>An operating agreement outlines how your LLC will be managed:</p>
+                            <ul>
+                                <li>Required in some states, recommended in all</li>
+                                <li>Defines ownership percentages</li>
+                                <li>Outlines management structure</li>
+                                <li>Establishes voting rights and procedures</li>
+                                <li>Protects limited liability status</li>
+                            </ul>
+                            <div class="alert alert-warning">
+                                <strong>Important:</strong> Even single-member LLCs should have an operating agreement to maintain liability protection.
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Step 6 -->
+                    <div class="card mb-4 border-0 shadow-sm">
+                        <div class="card-header bg-secondary text-white">
+                            <h3 class="mb-0">
+                                <span class="badge bg-light text-secondary me-3">6</span>
+                                Obtain an EIN (Employer Identification Number)
+                            </h3>
+                        </div>
+                        <div class="card-body">
+                            <p>An EIN is like a Social Security number for your business:</p>
+                            <ul>
+                                <li>Free from the IRS</li>
+                                <li>Required for hiring employees</li>
+                                <li>Needed for business bank accounts</li>
+                                <li>Used for tax filing</li>
+                                <li>Protects your personal Social Security number</li>
+                            </ul>
+                            <div class="text-center">
+                                <a href="https://www.irs.gov/businesses/small-businesses-self-employed/apply-for-an-employer-identification-number-ein-online" target="_blank" rel="nofollow" class="btn btn-primary">
+                                    <i class="fas fa-external-link-alt me-2"></i>Apply for EIN Online
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Step 7 -->
+                    <div class="card mb-4 border-0 shadow-sm">
+                        <div class="card-header bg-dark text-white">
+                            <h3 class="mb-0">
+                                <span class="badge bg-light text-dark me-3">7</span>
+                                Open a Business Bank Account
+                            </h3>
+                        </div>
+                        <div class="card-body">
+                            <p>Separate your business and personal finances:</p>
+                            <ul>
+                                <li>Required to maintain liability protection</li>
+                                <li>Makes accounting and tax filing easier</li>
+                                <li>Professional appearance for customers</li>
+                                <li>Better financial organization</li>
+                            </ul>
+                            <div class="alert alert-info">
+                                <strong>Tip:</strong> Many banks offer special business account packages for new LLCs.
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Step 8 -->
+                    <div class="card mb-4 border-0 shadow-sm">
+                        <div class="card-header bg-primary text-white">
+                            <h3 class="mb-0">
+                                <span class="badge bg-light text-primary me-3">8</span>
+                                Obtain Required Licenses and Permits
+                            </h3>
+                        </div>
+                        <div class="card-body">
+                            <p>Depending on your business type and location:</p>
+                            <ul>
+                                <li>Business license from your city/county</li>
+                                <li>Professional licenses (if applicable)</li>
+                                <li>Industry-specific permits</li>
+                                <li>Sales tax permit (if selling products)</li>
+                            </ul>
+                            <div class="text-center">
+                                <a href="https://www.sba.gov/business-guide/launch-your-business/get-business-licenses-permits" target="_blank" rel="nofollow" class="btn btn-outline-primary">
+                                    <i class="fas fa-external-link-alt me-2"></i>Check License Requirements
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Additional Considerations -->
+                <div class="mb-5">
+                    <h2 class="mb-4">Additional Considerations</h2>
+                    <div class="row">
+                        <div class="col-md-6 mb-4">
+                            <div class="card h-100 border-0 shadow-sm">
+                                <div class="card-body">
+                                    <h5 class="card-title text-primary">
+                                        <i class="fas fa-calendar-alt me-2"></i>Ongoing Requirements
+                                    </h5>
+                                    <ul>
+                                        <li>Annual reports (most states)</li>
+                                        <li>State tax filings</li>
+                                        <li>Federal tax returns</li>
+                                        <li>Maintain registered agent</li>
+                                        <li>Keep records updated</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 mb-4">
+                            <div class="card h-100 border-0 shadow-sm">
+                                <div class="card-body">
+                                    <h5 class="card-title text-success">
+                                        <i class="fas fa-shield-alt me-2"></i>Liability Protection
+                                    </h5>
+                                    <ul>
+                                        <li>Personal assets protected</li>
+                                        <li>Business debts separate</li>
+                                        <li>Professional credibility</li>
+                                        <li>Tax flexibility</li>
+                                        <li>Easier to raise capital</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Professional Help -->
+                <div class="mb-5">
+                    <div class="alert alert-success">
+                        <h4><i class="fas fa-lightbulb me-2"></i>When to Seek Professional Help</h4>
+                        <p>Consider hiring a professional if you have:</p>
+                        <ul>
+                            <li>Multiple owners or complex ownership structure</li>
+                            <li>Unusual business activities</li>
+                            <li>Need for specialized tax planning</li>
+                            <li>Complex compliance requirements</li>
+                            <li>Questions about liability protection</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Call to Action -->
+                <div class="text-center">
+                    <div class="card border-0 shadow-sm bg-primary text-white">
+                        <div class="card-body p-5">
+                            <h3 class="mb-3">Ready to Form Your LLC?</h3>
+                            <p class="mb-4">Use our directory to find trusted LLC formation services in your area or online.</p>
+                            <a href="{{ url_for('index') }}" class="btn btn-warning btn-lg fw-bold">
+                                <i class="fas fa-search me-2"></i>Find LLC Services
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

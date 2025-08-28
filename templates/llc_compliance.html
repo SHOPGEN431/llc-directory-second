@@ -1,0 +1,461 @@
+{% extends "base.html" %}
+
+{% block title %}LLC Compliance Guide - Ongoing Requirements and Obligations{% endblock %}
+{% block meta_description %}Complete guide to LLC compliance requirements. Learn about annual reports, state filings, record keeping, and ongoing obligations to maintain your LLC's good standing.{% endblock %}
+
+{% block content %}
+<!-- Header -->
+<section class="bg-primary text-white py-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="{{ url_for('index') }}" class="text-white">Home</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">LLC Compliance</li>
+                    </ol>
+                </nav>
+                <h1 class="display-4 fw-bold">LLC Compliance Guide</h1>
+                <p class="lead">Complete guide to maintaining your LLC's compliance and good standing</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Main Content -->
+<section class="py-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 mx-auto">
+                <!-- Introduction -->
+                <div class="mb-5">
+                    <div class="alert alert-info">
+                        <h4><i class="fas fa-clipboard-check me-2"></i>LLC Compliance Overview</h4>
+                        <p class="mb-0">While LLCs have fewer compliance requirements than corporations, they still have ongoing obligations to maintain their good standing and liability protection. Understanding and meeting these requirements is crucial for protecting your business and personal assets.</p>
+                    </div>
+                </div>
+
+                <!-- Annual Reports -->
+                <div class="mb-5">
+                    <h2 class="mb-4">Annual Reports and State Filings</h2>
+                    <div class="card border-0 shadow-sm">
+                        <div class="card-header bg-success text-white">
+                            <h3 class="mb-0">
+                                <i class="fas fa-calendar-alt me-2"></i>Annual Reports
+                            </h3>
+                        </div>
+                        <div class="card-body">
+                            <p>Most states require LLCs to file annual reports to maintain good standing:</p>
+                            
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <h5 class="text-success">What's Required:</h5>
+                                    <ul>
+                                        <li>Basic company information</li>
+                                        <li>Registered agent details</li>
+                                        <li>Principal office address</li>
+                                        <li>Member/manager information</li>
+                                        <li>Business activities summary</li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-6">
+                                    <h5 class="text-warning">Common Deadlines:</h5>
+                                    <ul>
+                                        <li><strong>Delaware:</strong> March 1</li>
+                                        <li><strong>California:</strong> By anniversary date</li>
+                                        <li><strong>Texas:</strong> May 15</li>
+                                        <li><strong>New York:</strong> By anniversary date</li>
+                                        <li><strong>Florida:</strong> May 1</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="alert alert-warning">
+                                <strong>Important:</strong> Missing annual reports can result in late fees, penalties, and potential dissolution of your LLC.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- State-Specific Requirements -->
+                <div class="mb-5">
+                    <h2 class="mb-4">State-Specific Compliance Requirements</h2>
+                    
+                    <!-- Franchise Taxes -->
+                    <div class="card mb-4 border-0 shadow-sm">
+                        <div class="card-header bg-primary text-white">
+                            <h4 class="mb-0">
+                                <i class="fas fa-dollar-sign me-2"></i>Franchise Taxes
+                            </h4>
+                        </div>
+                        <div class="card-body">
+                            <p>Some states charge franchise taxes or similar fees:</p>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <h5>States with Franchise Taxes:</h5>
+                                    <ul>
+                                        <li><strong>Delaware:</strong> $300 minimum</li>
+                                        <li><strong>Texas:</strong> $0.375 per $1,000 of capital</li>
+                                        <li><strong>California:</strong> $800 minimum franchise tax</li>
+                                        <li><strong>New York:</strong> $25 minimum</li>
+                                        <li><strong>Illinois:</strong> $250 minimum</li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-6">
+                                    <h5>States with No Franchise Tax:</h5>
+                                    <ul>
+                                        <li>Wyoming</li>
+                                        <li>Nevada</li>
+                                        <li>South Dakota</li>
+                                        <li>Alaska</li>
+                                        <li>New Hampshire</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Business Licenses -->
+                    <div class="card mb-4 border-0 shadow-sm">
+                        <div class="card-header bg-info text-white">
+                            <h4 class="mb-0">
+                                <i class="fas fa-certificate me-2"></i>Business Licenses and Permits
+                            </h4>
+                        </div>
+                        <div class="card-body">
+                            <p>Depending on your business type and location:</p>
+                            <ul>
+                                <li><strong>General business license:</strong> Required in most cities/counties</li>
+                                <li><strong>Professional licenses:</strong> For regulated professions</li>
+                                <li><strong>Industry-specific permits:</strong> For certain business types</li>
+                                <li><strong>Sales tax permit:</strong> If selling products or services</li>
+                                <li><strong>Zoning permits:</strong> For physical locations</li>
+                            </ul>
+                            
+                            <div class="alert alert-info">
+                                <strong>Tip:</strong> Check with your local city/county clerk and state licensing board for specific requirements.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Record Keeping Requirements -->
+                <div class="mb-5">
+                    <h2 class="mb-4">Record Keeping Requirements</h2>
+                    <div class="card border-0 shadow-sm">
+                        <div class="card-header bg-warning text-dark">
+                            <h3 class="mb-0">
+                                <i class="fas fa-folder-open me-2"></i>Required Records
+                            </h3>
+                        </div>
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <h5>Legal Documents:</h5>
+                                    <ul>
+                                        <li>Articles of Organization</li>
+                                        <li>Operating Agreement</li>
+                                        <li>EIN documentation</li>
+                                        <li>Business licenses and permits</li>
+                                        <li>Annual reports</li>
+                                        <li>Tax returns and filings</li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-6">
+                                    <h5>Financial Records:</h5>
+                                    <ul>
+                                        <li>Bank statements and records</li>
+                                        <li>Income and expense records</li>
+                                        <li>Invoices and receipts</li>
+                                        <li>Payroll records (if applicable)</li>
+                                        <li>Asset purchase records</li>
+                                        <li>Loan agreements</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="alert alert-success">
+                                <strong>Best Practice:</strong> Keep records for at least 7 years for tax purposes and maintain organized digital and physical copies.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Ongoing Compliance Tasks -->
+                <div class="mb-5">
+                    <h2 class="mb-4">Ongoing Compliance Tasks</h2>
+                    <div class="row">
+                        <div class="col-md-6 mb-4">
+                            <div class="card h-100 border-0 shadow-sm">
+                                <div class="card-header bg-success text-white">
+                                    <h5 class="mb-0">Monthly Tasks</h5>
+                                </div>
+                                <div class="card-body">
+                                    <ul>
+                                        <li>Reconcile bank accounts</li>
+                                        <li>Review financial statements</li>
+                                        <li>Update expense records</li>
+                                        <li>Check for new compliance requirements</li>
+                                        <li>Review business performance</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 mb-4">
+                            <div class="card h-100 border-0 shadow-sm">
+                                <div class="card-header bg-primary text-white">
+                                    <h5 class="mb-0">Quarterly Tasks</h5>
+                                </div>
+                                <div class="card-body">
+                                    <ul>
+                                        <li>Make estimated tax payments</li>
+                                        <li>Review and update business plan</li>
+                                        <li>Check license renewals</li>
+                                        <li>Update insurance policies</li>
+                                        <li>Review compliance calendar</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 mb-4">
+                            <div class="card h-100 border-0 shadow-sm">
+                                <div class="card-header bg-warning text-dark">
+                                    <h5 class="mb-0">Annual Tasks</h5>
+                                </div>
+                                <div class="card-body">
+                                    <ul>
+                                        <li>File annual reports</li>
+                                        <li>Pay franchise taxes</li>
+                                        <li>Renew business licenses</li>
+                                        <li>Update operating agreement</li>
+                                        <li>Review registered agent</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 mb-4">
+                            <div class="card h-100 border-0 shadow-sm">
+                                <div class="card-header bg-info text-white">
+                                    <h5 class="mb-0">As Needed</h5>
+                                </div>
+                                <div class="card-body">
+                                    <ul>
+                                        <li>Update member information</li>
+                                        <li>Change registered agent</li>
+                                        <li>Amend Articles of Organization</li>
+                                        <li>Update business address</li>
+                                        <li>Add new business activities</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Compliance Calendar -->
+                <div class="mb-5">
+                    <h2 class="mb-4">Compliance Calendar</h2>
+                    <div class="card border-0 shadow-sm">
+                        <div class="card-body">
+                            <div class="table-responsive">
+                                <table class="table table-bordered">
+                                    <thead class="table-dark">
+                                        <tr>
+                                            <th>Month</th>
+                                            <th>Task</th>
+                                            <th>Due Date</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>January</td>
+                                            <td>Q4 Estimated Tax Payment</td>
+                                            <td>15th</td>
+                                        </tr>
+                                        <tr>
+                                            <td>March</td>
+                                            <td>Delaware Annual Report</td>
+                                            <td>1st</td>
+                                        </tr>
+                                        <tr>
+                                            <td>April</td>
+                                            <td>Q1 Estimated Tax Payment</td>
+                                            <td>15th</td>
+                                        </tr>
+                                        <tr>
+                                            <td>May</td>
+                                            <td>Texas Annual Report</td>
+                                            <td>15th</td>
+                                        </tr>
+                                        <tr>
+                                            <td>June</td>
+                                            <td>Q2 Estimated Tax Payment</td>
+                                            <td>15th</td>
+                                        </tr>
+                                        <tr>
+                                            <td>September</td>
+                                            <td>Q3 Estimated Tax Payment</td>
+                                            <td>15th</td>
+                                        </tr>
+                                        <tr>
+                                            <td>December</td>
+                                            <td>Plan for next year</td>
+                                            <td>Ongoing</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Common Compliance Mistakes -->
+                <div class="mb-5">
+                    <h2 class="mb-4">Common Compliance Mistakes to Avoid</h2>
+                    <div class="row">
+                        <div class="col-md-6 mb-4">
+                            <div class="card h-100 border-danger">
+                                <div class="card-header bg-danger text-white">
+                                    <h5 class="mb-0">Critical Mistakes</h5>
+                                </div>
+                                <div class="card-body">
+                                    <ul>
+                                        <li>Missing annual report deadlines</li>
+                                        <li>Not maintaining separate bank accounts</li>
+                                        <li>Failing to pay franchise taxes</li>
+                                        <li>Not updating member information</li>
+                                        <li>Mixing personal and business expenses</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 mb-4">
+                            <div class="card h-100 border-warning">
+                                <div class="card-header bg-warning text-dark">
+                                    <h5 class="mb-0">Common Oversights</h5>
+                                </div>
+                                <div class="card-body">
+                                    <ul>
+                                        <li>Forgetting to renew licenses</li>
+                                        <li>Not keeping proper records</li>
+                                        <li>Missing estimated tax payments</li>
+                                        <li>Not updating operating agreement</li>
+                                        <li>Ignoring state-specific requirements</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Compliance Tools and Services -->
+                <div class="mb-5">
+                    <h2 class="mb-4">Compliance Tools and Services</h2>
+                    <div class="row">
+                        <div class="col-md-6 mb-4">
+                            <div class="card h-100 border-0 shadow-sm">
+                                <div class="card-header bg-success text-white">
+                                    <h5 class="mb-0">DIY Compliance</h5>
+                                </div>
+                                <div class="card-body">
+                                    <ul>
+                                        <li>State business portals</li>
+                                        <li>Online filing systems</li>
+                                        <li>Compliance checklists</li>
+                                        <li>Calendar reminders</li>
+                                        <li>Document templates</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 mb-4">
+                            <div class="card h-100 border-0 shadow-sm">
+                                <div class="card-header bg-primary text-white">
+                                    <h5 class="mb-0">Professional Services</h5>
+                                </div>
+                                <div class="card-body">
+                                    <ul>
+                                        <li>Registered agent services</li>
+                                        <li>Compliance monitoring</li>
+                                        <li>Annual report filing</li>
+                                        <li>Document preparation</li>
+                                        <li>Compliance consulting</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Consequences of Non-Compliance -->
+                <div class="mb-5">
+                    <h2 class="mb-4">Consequences of Non-Compliance</h2>
+                    <div class="card border-0 shadow-sm">
+                        <div class="card-header bg-danger text-white">
+                            <h3 class="mb-0">
+                                <i class="fas fa-exclamation-triangle me-2"></i>Risks of Non-Compliance
+                            </h3>
+                        </div>
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <h5 class="text-danger">Financial Consequences:</h5>
+                                    <ul>
+                                        <li>Late fees and penalties</li>
+                                        <li>Interest charges</li>
+                                        <li>Reinstatement fees</li>
+                                        <li>Loss of tax benefits</li>
+                                        <li>Legal costs</li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-6">
+                                    <h5 class="text-danger">Legal Consequences:</h5>
+                                    <ul>
+                                        <li>Loss of liability protection</li>
+                                        <li>Administrative dissolution</li>
+                                        <li>Difficulty obtaining financing</li>
+                                        <li>Problems with contracts</li>
+                                        <li>Personal liability exposure</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="alert alert-warning">
+                                <strong>Warning:</strong> Non-compliance can pierce the corporate veil, exposing your personal assets to business liabilities.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Professional Help -->
+                <div class="mb-5">
+                    <div class="alert alert-success">
+                        <h4><i class="fas fa-user-tie me-2"></i>When to Seek Professional Compliance Help</h4>
+                        <p>Consider hiring compliance professionals if you have:</p>
+                        <ul>
+                            <li>Multiple state operations or foreign LLCs</li>
+                            <li>Complex business activities or multiple entities</li>
+                            <li>Limited time to manage compliance</li>
+                            <li>History of compliance issues</li>
+                            <li>Need for ongoing monitoring and reminders</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Call to Action -->
+                <div class="text-center">
+                    <div class="card border-0 shadow-sm bg-primary text-white">
+                        <div class="card-body p-5">
+                            <h3 class="mb-3">Need Compliance Help?</h3>
+                            <p class="mb-4">Find registered agent services and compliance professionals in our directory.</p>
+                            <a href="{{ url_for('index') }}" class="btn btn-warning btn-lg fw-bold">
+                                <i class="fas fa-search me-2"></i>Find Compliance Services
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

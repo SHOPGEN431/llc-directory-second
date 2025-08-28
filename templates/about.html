@@ -1,0 +1,209 @@
+{% extends "base.html" %}
+
+{% block title %}About Us - LLC Directory{% endblock %}
+{% block meta_description %}Learn about our mission to connect entrepreneurs with trusted LLC formation services across the United States.{% endblock %}
+
+{% block content %}
+<!-- Header -->
+<section class="bg-primary text-white py-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="{{ url_for('index') }}" class="text-white">Home</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">About Us</li>
+                    </ol>
+                </nav>
+                <h1 class="display-4 fw-bold">About Us</h1>
+                <p class="lead">Your trusted partner in finding the best LLC formation services nationwide</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Main Content -->
+<section class="py-5">
+    <div class="container">
+        <!-- Mission Section -->
+        <div class="row mb-5">
+            <div class="col-lg-8 mx-auto text-center">
+                <h2 class="mb-4">Our Mission</h2>
+                <p class="lead text-muted">
+                    We're dedicated to simplifying the LLC formation process by connecting entrepreneurs with trusted, 
+                    reliable business formation services across all 50 states. Our comprehensive directory helps you 
+                    make informed decisions about your business's legal foundation.
+                </p>
+            </div>
+        </div>
+
+        <!-- What We Do Section -->
+        <div class="row mb-5">
+            <div class="col-12">
+                <h2 class="text-center mb-5">What We Do</h2>
+                <div class="row g-4">
+                    <div class="col-md-4">
+                        <div class="card h-100 border-0 shadow-sm text-center">
+                            <div class="card-body p-4">
+                                <div class="bg-primary bg-opacity-10 rounded-circle d-inline-flex align-items-center justify-content-center mb-3" style="width: 80px; height: 80px;">
+                                    <i class="fas fa-search fa-2x text-primary"></i>
+                                </div>
+                                <h5 class="card-title">Comprehensive Directory</h5>
+                                <p class="card-text text-muted">
+                                    We maintain an extensive database of LLC formation services, 
+                                    including local providers and online services, with detailed 
+                                    information about pricing, features, and customer reviews.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card h-100 border-0 shadow-sm text-center">
+                            <div class="card-body p-4">
+                                <div class="bg-primary bg-opacity-10 rounded-circle d-inline-flex align-items-center justify-content-center mb-3" style="width: 80px; height: 80px;">
+                                    <i class="fas fa-calculator fa-2x text-primary"></i>
+                                </div>
+                                <h5 class="card-title">Interactive Tools</h5>
+                                <p class="card-text text-muted">
+                                    Our calculators help you estimate formation costs, compare 
+                                    LLC vs. S-Corp tax benefits, and calculate foreign qualification 
+                                    expenses to make informed business decisions.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card h-100 border-0 shadow-sm text-center">
+                            <div class="card-body p-4">
+                                <div class="bg-primary bg-opacity-10 rounded-circle d-inline-flex align-items-center justify-content-center mb-3" style="width: 80px; height: 80px;">
+                                    <i class="fas fa-map-marker-alt fa-2x text-primary"></i>
+                                </div>
+                                <h5 class="card-title">Local & National Coverage</h5>
+                                <p class="card-text text-muted">
+                                    Whether you prefer local attorneys or online services, 
+                                    we provide options for every preference and budget, 
+                                    covering all states and major metropolitan areas.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Why Choose Us Section -->
+        <div class="row mb-5">
+            <div class="col-lg-10 mx-auto">
+                <h2 class="text-center mb-5">Why Choose Our Directory</h2>
+                <div class="row g-4">
+                    <div class="col-md-6">
+                        <div class="d-flex align-items-start">
+                            <div class="bg-success bg-opacity-10 rounded-circle d-flex align-items-center justify-content-center me-3" style="width: 50px; height: 50px; min-width: 50px;">
+                                <i class="fas fa-check text-success"></i>
+                            </div>
+                            <div>
+                                <h5>Verified Information</h5>
+                                <p class="text-muted">All listings are verified and regularly updated to ensure accuracy and reliability.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="d-flex align-items-start">
+                            <div class="bg-success bg-opacity-10 rounded-circle d-flex align-items-center justify-content-center me-3" style="width: 50px; height: 50px; min-width: 50px;">
+                                <i class="fas fa-check text-success"></i>
+                            </div>
+                            <div>
+                                <h5>Comprehensive Reviews</h5>
+                                <p class="text-muted">Access detailed ratings, reviews, and customer feedback to make informed decisions.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="d-flex align-items-start">
+                            <div class="bg-success bg-opacity-10 rounded-circle d-flex align-items-center justify-content-center me-3" style="width: 50px; height: 50px; min-width: 50px;">
+                                <i class="fas fa-check text-success"></i>
+                            </div>
+                            <div>
+                                <h5>Educational Resources</h5>
+                                <p class="text-muted">Learn about LLC formation, tax implications, and business compliance through our tools.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="d-flex align-items-start">
+                            <div class="bg-success bg-opacity-10 rounded-circle d-flex align-items-center justify-content-center me-3" style="width: 50px; height: 50px; min-width: 50px;">
+                                <i class="fas fa-check text-success"></i>
+                            </div>
+                            <div>
+                                <h5>Free Access</h5>
+                                <p class="text-muted">All our directory listings, tools, and educational content are completely free to use.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Our Commitment Section -->
+        <div class="row mb-5">
+            <div class="col-lg-8 mx-auto text-center">
+                <h2 class="mb-4">Our Commitment</h2>
+                <p class="lead text-muted">
+                    We're committed to transparency, accuracy, and helping entrepreneurs succeed. 
+                    Our platform is designed to save you time and provide the information you need 
+                    to make confident decisions about your business formation.
+                </p>
+                <div class="row mt-4">
+                    <div class="col-md-4">
+                        <div class="text-center">
+                            <i class="fas fa-shield-alt fa-2x text-primary mb-2"></i>
+                            <h5>Trust & Security</h5>
+                            <p class="text-muted small">Your information is secure and we maintain strict privacy standards.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="text-center">
+                            <i class="fas fa-handshake fa-2x text-primary mb-2"></i>
+                            <h5>Partnership</h5>
+                            <p class="text-muted small">We partner with reputable service providers to ensure quality options.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="text-center">
+                            <i class="fas fa-users fa-2x text-primary mb-2"></i>
+                            <h5>Community</h5>
+                            <p class="text-muted small">Supporting the entrepreneurial community with reliable resources.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Contact Section -->
+        <div class="row">
+            <div class="col-lg-8 mx-auto text-center">
+                <h2 class="mb-4">Get in Touch</h2>
+                <p class="text-muted mb-4">
+                    Have questions about our directory or suggestions for improvement? 
+                    We'd love to hear from you.
+                </p>
+                                <div class="row justify-content-center">
+                    <div class="col-md-6">
+                        <div class="card border-0 shadow-sm h-100">
+                            <div class="card-body text-center">
+                                <i class="fas fa-comments fa-2x text-primary mb-3"></i>
+                                <h5>Contact Form</h5>
+                                <p class="text-muted">Send us a message directly</p>
+                                <a href="{{ url_for('contact') }}" class="btn btn-primary mt-2">
+                                    <i class="fas fa-arrow-right me-2"></i>
+                                    Contact Us
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

@@ -1,0 +1,17 @@
+{
+    "name": "LLC Directory",
+    "short_name": "LLC Directory",
+    "description": "Comprehensive LLC Directory - Find local businesses and companies in your area",
+    "start_url": "/",
+    "display": "standalone",
+    "background_color": "#0d6efd",
+    "theme_color": "#0d6efd",
+    "icons": [
+        {
+            "src": "/static/favicon.svg",
+            "sizes": "any",
+            "type": "image/svg+xml",
+            "purpose": "any maskable"
+        }
+    ]
+}

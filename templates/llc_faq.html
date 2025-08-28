@@ -1,0 +1,539 @@
+{% extends "base.html" %}
+
+{% block title %}LLC FAQ - Frequently Asked Questions About LLCs{% endblock %}
+{% block meta_description %}Get answers to frequently asked questions about LLCs. Learn about formation, taxation, compliance, and operation of Limited Liability Companies.{% endblock %}
+
+{% block content %}
+<!-- Header -->
+<section class="bg-primary text-white py-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="{{ url_for('index') }}" class="text-white">Home</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">LLC FAQ</li>
+                    </ol>
+                </nav>
+                <h1 class="display-4 fw-bold">LLC FAQ</h1>
+                <p class="lead">Frequently asked questions about Limited Liability Companies</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Main Content -->
+<section class="py-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 mx-auto">
+                <!-- Introduction -->
+                <div class="mb-5">
+                    <div class="alert alert-info">
+                        <h4><i class="fas fa-question-circle me-2"></i>Common LLC Questions</h4>
+                        <p class="mb-0">Find answers to the most frequently asked questions about LLCs. If you don't see your question here, check our other resource pages or contact us for more information.</p>
+                    </div>
+                </div>
+
+                <!-- Formation Questions -->
+                <div class="mb-5">
+                    <h2 class="mb-4">Formation & Setup</h2>
+                    
+                    <div class="accordion" id="formationAccordion">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="heading1">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse1">
+                                    <strong>Q: How much does it cost to form an LLC?</strong>
+                                </button>
+                            </h2>
+                            <div id="collapse1" class="accordion-collapse collapse show" data-bs-parent="#formationAccordion">
+                                <div class="accordion-body">
+                                    <p><strong>A:</strong> LLC formation costs vary by state:</p>
+                                    <ul>
+                                        <li><strong>State filing fees:</strong> $50-$500 (varies by state)</li>
+                                        <li><strong>Professional services:</strong> $0-$300+ (optional)</li>
+                                        <li><strong>Registered agent:</strong> $50-$300/year</li>
+                                        <li><strong>Operating agreement:</strong> $0-$200</li>
+                                    </ul>
+                                    <p>Total formation cost typically ranges from $100-$1,000 depending on your state and whether you use professional services.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="heading2">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse2">
+                                    <strong>Q: How long does it take to form an LLC?</strong>
+                                </button>
+                            </h2>
+                            <div id="collapse2" class="accordion-collapse collapse" data-bs-parent="#formationAccordion">
+                                <div class="accordion-body">
+                                    <p><strong>A:</strong> Processing times vary by state:</p>
+                                    <ul>
+                                        <li><strong>Online filing:</strong> 1-3 business days</li>
+                                        <li><strong>Mail filing:</strong> 1-4 weeks</li>
+                                        <li><strong>Expedited filing:</strong> Same day to 24 hours (additional fee)</li>
+                                    </ul>
+                                    <p>Most states offer online filing for faster processing. Delaware and Nevada are known for quick processing times.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="heading3">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse3">
+                                    <strong>Q: Do I need a registered agent?</strong>
+                                </button>
+                            </h2>
+                            <div id="collapse3" class="accordion-collapse collapse" data-bs-parent="#formationAccordion">
+                                <div class="accordion-body">
+                                    <p><strong>A:</strong> Yes, all LLCs must have a registered agent. The registered agent:</p>
+                                    <ul>
+                                        <li>Receives legal documents on behalf of your LLC</li>
+                                        <li>Must have a physical address in your formation state</li>
+                                        <li>Must be available during business hours</li>
+                                        <li>Can be yourself, a business partner, or a professional service</li>
+                                    </ul>
+                                    <p>Professional registered agent services offer privacy protection and ensure you never miss important documents.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="heading4">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse4">
+                                    <strong>Q: Is an operating agreement required?</strong>
+                                </button>
+                            </h2>
+                            <div id="collapse4" class="accordion-collapse collapse" data-bs-parent="#formationAccordion">
+                                <div class="accordion-body">
+                                    <p><strong>A:</strong> Operating agreements are:</p>
+                                    <ul>
+                                        <li><strong>Required in some states:</strong> California, Delaware, Maine, Missouri, New York</li>
+                                        <li><strong>Recommended in all states:</strong> Even for single-member LLCs</li>
+                                        <li><strong>Important for liability protection:</strong> Helps maintain the corporate veil</li>
+                                        <li><strong>Defines business rules:</strong> Management, voting, profit distribution</li>
+                                    </ul>
+                                    <p>Even single-member LLCs should have an operating agreement to maintain liability protection and establish business procedures.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Taxation Questions -->
+                <div class="mb-5">
+                    <h2 class="mb-4">Taxation & Tax Filing</h2>
+                    
+                    <div class="accordion" id="taxAccordion">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="heading5">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse5">
+                                    <strong>Q: How are LLCs taxed?</strong>
+                                </button>
+                            </h2>
+                            <div id="collapse5" class="accordion-collapse collapse show" data-bs-parent="#taxAccordion">
+                                <div class="accordion-body">
+                                    <p><strong>A:</strong> LLCs have flexible tax treatment:</p>
+                                    <ul>
+                                        <li><strong>Default (Pass-through):</strong> Income flows to owners' personal tax returns</li>
+                                        <li><strong>S-Corporation election:</strong> Can reduce self-employment taxes</li>
+                                        <li><strong>C-Corporation election:</strong> Subject to corporate tax rates</li>
+                                        <li><strong>No double taxation:</strong> Under default and S-Corp treatment</li>
+                                    </ul>
+                                    <p>Most LLCs use pass-through taxation, which is simpler and avoids double taxation.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="heading6">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse6">
+                                    <strong>Q: Do I need an EIN for my LLC?</strong>
+                                </button>
+                            </h2>
+                            <div id="collapse6" class="accordion-collapse collapse" data-bs-parent="#taxAccordion">
+                                <div class="accordion-body">
+                                    <p><strong>A:</strong> EIN requirements depend on your situation:</p>
+                                    <ul>
+                                        <li><strong>Required if:</strong> You have employees, multiple members, or elect S-Corp taxation</li>
+                                        <li><strong>Recommended for:</strong> Business bank accounts, credit cards, and professional appearance</li>
+                                        <li><strong>Free from IRS:</strong> No cost to obtain</li>
+                                        <li><strong>Protects privacy:</strong> Keeps your Social Security number private</li>
+                                    </ul>
+                                    <p>Even single-member LLCs should get an EIN for business banking and professional purposes.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="heading7">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse7">
+                                    <strong>Q: What tax forms do LLCs file?</strong>
+                                </button>
+                            </h2>
+                            <div id="collapse7" class="accordion-collapse collapse" data-bs-parent="#taxAccordion">
+                                <div class="accordion-body">
+                                    <p><strong>A:</strong> Tax filing depends on LLC structure:</p>
+                                    <ul>
+                                        <li><strong>Single-member LLC:</strong> Schedule C (Form 1040)</li>
+                                        <li><strong>Multi-member LLC:</strong> Form 1065 + Schedule K-1 for each member</li>
+                                        <li><strong>S-Corp election:</strong> Form 1120S + Schedule K-1</li>
+                                        <li><strong>C-Corp election:</strong> Form 1120</li>
+                                    </ul>
+                                    <p>Members report their share of income on their personal tax returns (except C-Corp election).</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="heading8">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse8">
+                                    <strong>Q: Should I elect S-Corporation taxation?</strong>
+                                </button>
+                            </h2>
+                            <div id="collapse8" class="accordion-collapse collapse" data-bs-parent="#taxAccordion">
+                                <div class="accordion-body">
+                                    <p><strong>A:</strong> S-Corp election may be beneficial if:</p>
+                                    <ul>
+                                        <li><strong>High profits:</strong> $50,000+ annually</li>
+                                        <li><strong>Reasonable salary:</strong> Can pay yourself a reasonable salary</li>
+                                        <li><strong>Tax savings:</strong> Distributions not subject to self-employment tax</li>
+                                        <li><strong>Compliance:</strong> Willing to maintain S-Corp requirements</li>
+                                    </ul>
+                                    <p>Consult with a tax professional to determine if S-Corp election makes sense for your situation.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Compliance Questions -->
+                <div class="mb-5">
+                    <h2 class="mb-4">Compliance & Ongoing Requirements</h2>
+                    
+                    <div class="accordion" id="complianceAccordion">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="heading9">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse9">
+                                    <strong>Q: What ongoing requirements do LLCs have?</strong>
+                                </button>
+                            </h2>
+                            <div id="collapse9" class="accordion-collapse collapse show" data-bs-parent="#complianceAccordion">
+                                <div class="accordion-body">
+                                    <p><strong>A:</strong> Common ongoing requirements include:</p>
+                                    <ul>
+                                        <li><strong>Annual reports:</strong> Most states require yearly filings</li>
+                                        <li><strong>Franchise taxes:</strong> Some states charge annual fees</li>
+                                        <li><strong>Business licenses:</strong> Local and state permits</li>
+                                        <li><strong>Tax filings:</strong> Federal and state tax returns</li>
+                                        <li><strong>Record keeping:</strong> Maintain business records</li>
+                                    </ul>
+                                    <p>Requirements vary by state and business type. Check your state's specific requirements.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="heading10">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse10">
+                                    <strong>Q: What happens if I miss annual report deadlines?</strong>
+                                </button>
+                            </h2>
+                            <div id="collapse10" class="accordion-collapse collapse" data-bs-parent="#complianceAccordion">
+                                <div class="accordion-body">
+                                    <p><strong>A:</strong> Consequences of missing deadlines:</p>
+                                    <ul>
+                                        <li><strong>Late fees:</strong> $25-$500+ depending on state</li>
+                                        <li><strong>Penalties:</strong> Additional charges for continued non-compliance</li>
+                                        <li><strong>Loss of good standing:</strong> May affect business operations</li>
+                                        <li><strong>Administrative dissolution:</strong> State may dissolve your LLC</li>
+                                        <li><strong>Reinstatement fees:</strong> Cost to restore good standing</li>
+                                    </ul>
+                                    <p>Set up calendar reminders and consider using compliance services to avoid missing deadlines.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="heading11">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse11">
+                                    <strong>Q: Can I change my LLC's registered agent?</strong>
+                                </button>
+                            </h2>
+                            <div id="collapse11" class="accordion-collapse collapse" data-bs-parent="#complianceAccordion">
+                                <div class="accordion-body">
+                                    <p><strong>A:</strong> Yes, you can change your registered agent:</p>
+                                    <ul>
+                                        <li><strong>File amendment:</strong> Update with your state</li>
+                                        <li><strong>Notify current agent:</strong> Inform them of the change</li>
+                                        <li><strong>New agent consent:</strong> New agent must accept appointment</li>
+                                        <li><strong>Filing fees:</strong> $0-$50 depending on state</li>
+                                        <li><strong>Timing:</strong> Can be done anytime</li>
+                                    </ul>
+                                    <p>Most states allow online filing for registered agent changes.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Liability & Protection Questions -->
+                <div class="mb-5">
+                    <h2 class="mb-4">Liability Protection & Legal</h2>
+                    
+                    <div class="accordion" id="liabilityAccordion">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="heading12">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse12">
+                                    <strong>Q: How does LLC liability protection work?</strong>
+                                </button>
+                            </h2>
+                            <div id="collapse12" class="accordion-collapse collapse show" data-bs-parent="#liabilityAccordion">
+                                <div class="accordion-body">
+                                    <p><strong>A:</strong> LLC liability protection:</p>
+                                    <ul>
+                                        <li><strong>Separates business and personal:</strong> Business debts don't affect personal assets</li>
+                                        <li><strong>Protects personal property:</strong> Home, car, savings accounts protected</li>
+                                        <li><strong>Limited to investment:</strong> Members only risk their LLC investment</li>
+                                        <li><strong>Can be lost:</strong> If corporate veil is pierced</li>
+                                        <li><strong>Requires maintenance:</strong> Proper record keeping and compliance</li>
+                                    </ul>
+                                    <p>Maintain separate bank accounts and proper records to preserve liability protection.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="heading13">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse13">
+                                    <strong>Q: Can the corporate veil be pierced?</strong>
+                                </button>
+                            </h2>
+                            <div id="collapse13" class="accordion-collapse collapse" data-bs-parent="#liabilityAccordion">
+                                <div class="accordion-body">
+                                    <p><strong>A:</strong> Yes, courts can pierce the corporate veil if:</p>
+                                    <ul>
+                                        <li><strong>Commingling funds:</strong> Mixing personal and business money</li>
+                                        <li><strong>Inadequate capitalization:</strong> Insufficient business funding</li>
+                                        <li><strong>Failure to maintain records:</strong> Poor bookkeeping</li>
+                                        <li><strong>Fraud or misrepresentation:</strong> Intentional wrongdoing</li>
+                                        <li><strong>Non-compliance:</strong> Missing filings or requirements</li>
+                                    </ul>
+                                    <p>Maintain proper business practices to avoid piercing the corporate veil.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="heading14">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse14">
+                                    <strong>Q: Do I need business insurance with an LLC?</strong>
+                                </button>
+                            </h2>
+                            <div id="collapse14" class="accordion-collapse collapse" data-bs-parent="#liabilityAccordion">
+                                <div class="accordion-body">
+                                    <p><strong>A:</strong> Insurance is still important because:</p>
+                                    <ul>
+                                        <li><strong>LLC protection has limits:</strong> Doesn't cover all situations</li>
+                                        <li><strong>Professional liability:</strong> Errors and omissions coverage</li>
+                                        <li><strong>Property protection:</strong> Covers business assets</li>
+                                        <li><strong>Contract requirements:</strong> Clients may require insurance</li>
+                                        <li><strong>Peace of mind:</strong> Additional protection layer</li>
+                                    </ul>
+                                    <p>Consider general liability, professional liability, and property insurance for comprehensive protection.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Business Operations Questions -->
+                <div class="mb-5">
+                    <h2 class="mb-4">Business Operations & Management</h2>
+                    
+                    <div class="accordion" id="operationsAccordion">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="heading15">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse15">
+                                    <strong>Q: Can I have multiple owners in my LLC?</strong>
+                                </button>
+                            </h2>
+                            <div id="collapse15" class="accordion-collapse collapse show" data-bs-parent="#operationsAccordion">
+                                <div class="accordion-body">
+                                    <p><strong>A:</strong> Yes, LLCs can have multiple owners (members):</p>
+                                    <ul>
+                                        <li><strong>No limit:</strong> Can have unlimited members</li>
+                                        <li><strong>Flexible ownership:</strong> Can be individuals, corporations, or other LLCs</li>
+                                        <li><strong>Ownership percentages:</strong> Can be equal or unequal</li>
+                                        <li><strong>Management options:</strong> Member-managed or manager-managed</li>
+                                        <li><strong>Operating agreement:</strong> Defines ownership and management</li>
+                                    </ul>
+                                    <p>Multi-member LLCs file Form 1065 and issue Schedule K-1 to each member.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="heading16">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse16">
+                                    <strong>Q: Can I change my LLC's name or address?</strong>
+                                </button>
+                            </h2>
+                            <div id="collapse16" class="accordion-collapse collapse" data-bs-parent="#operationsAccordion">
+                                <div class="accordion-body">
+                                    <p><strong>A:</strong> Yes, you can make changes by filing amendments:</p>
+                                    <ul>
+                                        <li><strong>Name change:</strong> File Articles of Amendment</li>
+                                        <li><strong>Address change:</strong> Update with state and registered agent</li>
+                                        <li><strong>Filing fees:</strong> $0-$100 depending on state</li>
+                                        <li><strong>Processing time:</strong> 1-10 business days</li>
+                                        <li><strong>Notify others:</strong> Update banks, vendors, and customers</li>
+                                    </ul>
+                                    <p>Some states allow online filing for address changes but require paper filing for name changes.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="heading17">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse17">
+                                    <strong>Q: Can I convert my LLC to a corporation?</strong>
+                                </button>
+                            </h2>
+                            <div id="collapse17" class="accordion-collapse collapse" data-bs-parent="#operationsAccordion">
+                                <div class="accordion-body">
+                                    <p><strong>A:</strong> Yes, conversion is possible:</p>
+                                    <ul>
+                                        <li><strong>Statutory conversion:</strong> Available in most states</li>
+                                        <li><strong>Filing requirements:</strong> Articles of Conversion</li>
+                                        <li><strong>Tax implications:</strong> May trigger taxable events</li>
+                                        <li><strong>Professional help:</strong> Recommended for complex conversions</li>
+                                        <li><strong>Timing:</strong> Can be done anytime</li>
+                                    </ul>
+                                    <p>Consult with legal and tax professionals before converting to understand all implications.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- State-Specific Questions -->
+                <div class="mb-5">
+                    <h2 class="mb-4">State-Specific Questions</h2>
+                    
+                    <div class="accordion" id="stateAccordion">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="heading18">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse18">
+                                    <strong>Q: Should I form in Delaware or my home state?</strong>
+                                </button>
+                            </h2>
+                            <div id="collapse18" class="accordion-collapse collapse show" data-bs-parent="#stateAccordion">
+                                <div class="accordion-body">
+                                    <p><strong>A:</strong> Consider these factors:</p>
+                                    <ul>
+                                        <li><strong>Delaware advantages:</strong> Business-friendly laws, privacy, established case law</li>
+                                        <li><strong>Home state advantages:</strong> Simpler compliance, lower costs, local expertise</li>
+                                        <li><strong>Foreign qualification:</strong> Required if operating in home state</li>
+                                        <li><strong>Cost comparison:</strong> Delaware has higher annual fees</li>
+                                        <li><strong>Business type:</strong> High-growth companies may prefer Delaware</li>
+                                    </ul>
+                                    <p>For most small businesses, forming in your home state is simpler and more cost-effective.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="heading19">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse19">
+                                    <strong>Q: What if I want to do business in multiple states?</strong>
+                                </button>
+                            </h2>
+                            <div id="collapse19" class="accordion-collapse collapse" data-bs-parent="#stateAccordion">
+                                <div class="accordion-body">
+                                    <p><strong>A:</strong> You'll need to register in additional states:</p>
+                                    <ul>
+                                        <li><strong>Foreign qualification:</strong> Register as "foreign LLC" in new states</li>
+                                        <li><strong>Additional fees:</strong> Registration and annual fees in each state</li>
+                                        <li><strong>Registered agent:</strong> May need agent in each state</li>
+                                        <li><strong>Tax filings:</strong> File returns in each state where you operate</li>
+                                        <li><strong>Compliance:</strong> Meet requirements in all states</li>
+                                    </ul>
+                                    <p>Consider the costs and complexity before expanding to multiple states.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Professional Help Section -->
+                <div class="mb-5">
+                    <div class="alert alert-success">
+                        <h4><i class="fas fa-user-tie me-2"></i>When to Seek Professional Help</h4>
+                        <p>Consider consulting professionals if you have:</p>
+                        <ul>
+                            <li>Complex business operations or multiple entities</li>
+                            <li>Questions about tax elections or planning</li>
+                            <li>Multiple owners or complex ownership structure</li>
+                            <li>Operations in multiple states</li>
+                            <li>Need for ongoing compliance monitoring</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Additional Resources -->
+                <div class="mb-5">
+                    <h2 class="mb-4">Additional Resources</h2>
+                    <div class="row">
+                        <div class="col-md-6 mb-4">
+                            <div class="card h-100 border-0 shadow-sm">
+                                <div class="card-header bg-primary text-white">
+                                    <h5 class="mb-0">Related Guides</h5>
+                                </div>
+                                <div class="card-body">
+                                    <ul>
+                                        <li><a href="{{ url_for('llc_guide') }}" class="text-decoration-none">LLC Formation Guide</a></li>
+                                        <li><a href="{{ url_for('llc_vs_corp') }}" class="text-decoration-none">LLC vs Corporation</a></li>
+                                        <li><a href="{{ url_for('llc_tax_guide') }}" class="text-decoration-none">LLC Tax Guide</a></li>
+                                        <li><a href="{{ url_for('llc_compliance') }}" class="text-decoration-none">LLC Compliance</a></li>
+                                        <li><a href="{{ url_for('llc_glossary') }}" class="text-decoration-none">LLC Glossary</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 mb-4">
+                            <div class="card h-100 border-0 shadow-sm">
+                                <div class="card-header bg-success text-white">
+                                    <h5 class="mb-0">Need More Help?</h5>
+                                </div>
+                                <div class="card-body">
+                                    <ul>
+                                        <li><a href="{{ url_for('contact') }}" class="text-decoration-none">Contact Us</a></li>
+                                        <li><a href="{{ url_for('index') }}" class="text-decoration-none">Find LLC Services</a></li>
+                                        <li><a href="{{ url_for('about') }}" class="text-decoration-none">About Our Directory</a></li>
+                                        <li><a href="{{ url_for('all_locations') }}" class="text-decoration-none">Browse All Locations</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Call to Action -->
+                <div class="text-center">
+                    <div class="card border-0 shadow-sm bg-primary text-white">
+                        <div class="card-body p-5">
+                            <h3 class="mb-3">Ready to Form Your LLC?</h3>
+                            <p class="mb-4">Now that you have answers to common questions, use our directory to find trusted LLC formation services.</p>
+                            <a href="{{ url_for('index') }}" class="btn btn-warning btn-lg fw-bold">
+                                <i class="fas fa-search me-2"></i>Find LLC Services
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

@@ -1,0 +1,398 @@
+{% extends "base.html" %}
+
+{% block title %}LLC Glossary - Common Terms and Definitions{% endblock %}
+{% block meta_description %}Comprehensive glossary of LLC terms and business terminology. Learn the definitions of common LLC-related terms and concepts.{% endblock %}
+
+{% block content %}
+<!-- Header -->
+<section class="bg-primary text-white py-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="{{ url_for('index') }}" class="text-white">Home</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">LLC Glossary</li>
+                    </ol>
+                </nav>
+                <h1 class="display-4 fw-bold">LLC Glossary</h1>
+                <p class="lead">Comprehensive guide to LLC terms and business terminology</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Main Content -->
+<section class="py-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-10 mx-auto">
+                <!-- Introduction -->
+                <div class="mb-5">
+                    <div class="alert alert-info">
+                        <h4><i class="fas fa-book me-2"></i>LLC Terminology Guide</h4>
+                        <p class="mb-0">Understanding LLC terminology is essential for making informed business decisions. This glossary provides clear definitions of common terms you'll encounter when forming and operating an LLC.</p>
+                    </div>
+                </div>
+
+                <!-- A-C Terms -->
+                <div class="mb-5">
+                    <h2 class="mb-4">A - C</h2>
+                    
+                    <div class="card mb-3 border-0 shadow-sm">
+                        <div class="card-body">
+                            <h5 class="text-primary">Articles of Organization</h5>
+                            <p>The official document filed with the state to create an LLC. Contains basic information about the company including name, address, registered agent, and purpose.</p>
+                        </div>
+                    </div>
+
+                    <div class="card mb-3 border-0 shadow-sm">
+                        <div class="card-body">
+                            <h5 class="text-primary">Annual Report</h5>
+                            <p>A yearly filing required by most states to update company information and maintain good standing. Includes current address, members, and business activities.</p>
+                        </div>
+                    </div>
+
+                    <div class="card mb-3 border-0 shadow-sm">
+                        <div class="card-body">
+                            <h5 class="text-primary">Asset Protection</h5>
+                            <p>The legal separation between business and personal assets that protects personal property from business liabilities and creditors.</p>
+                        </div>
+                    </div>
+
+                    <div class="card mb-3 border-0 shadow-sm">
+                        <div class="card-body">
+                            <h5 class="text-primary">Business License</h5>
+                            <p>A permit required by local governments to operate a business within their jurisdiction. Requirements vary by location and business type.</p>
+                        </div>
+                    </div>
+
+                    <div class="card mb-3 border-0 shadow-sm">
+                        <div class="card-body">
+                            <h5 class="text-primary">Capital Contribution</h5>
+                            <p>Money, property, or services contributed by members to the LLC in exchange for ownership interest. Can be made at formation or later.</p>
+                        </div>
+                    </div>
+
+                    <div class="card mb-3 border-0 shadow-sm">
+                        <div class="card-body">
+                            <h5 class="text-primary">Corporate Veil</h5>
+                            <p>The legal protection that separates business and personal liabilities. Can be "pierced" if the LLC is not properly maintained or operated.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- D-F Terms -->
+                <div class="mb-5">
+                    <h2 class="mb-4">D - F</h2>
+                    
+                    <div class="card mb-3 border-0 shadow-sm">
+                        <div class="card-body">
+                            <h5 class="text-success">Dissolution</h5>
+                            <p>The legal process of ending an LLC's existence. Can be voluntary (by members) or involuntary (by state action for non-compliance).</p>
+                        </div>
+                    </div>
+
+                    <div class="card mb-3 border-0 shadow-sm">
+                        <div class="card-body">
+                            <h5 class="text-success">Distribution</h5>
+                            <p>Money or property distributed to LLC members from company profits. Distributions are typically made according to ownership percentages.</p>
+                        </div>
+                    </div>
+
+                    <div class="card mb-3 border-0 shadow-sm">
+                        <div class="card-body">
+                            <h5 class="text-success">EIN (Employer Identification Number)</h5>
+                            <p>A federal tax identification number issued by the IRS. Required for hiring employees, opening business bank accounts, and filing tax returns.</p>
+                        </div>
+                    </div>
+
+                    <div class="card mb-3 border-0 shadow-sm">
+                        <div class="card-body">
+                            <h5 class="text-success">Foreign LLC</h5>
+                            <p>An LLC formed in one state but doing business in another state. Must register as a "foreign LLC" in the new state.</p>
+                        </div>
+                    </div>
+
+                    <div class="card mb-3 border-0 shadow-sm">
+                        <div class="card-body">
+                            <h5 class="text-success">Franchise Tax</h5>
+                            <p>An annual tax charged by some states for the privilege of doing business in that state. Amount varies by state and business size.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- G-I Terms -->
+                <div class="mb-5">
+                    <h2 class="mb-4">G - I</h2>
+                    
+                    <div class="card mb-3 border-0 shadow-sm">
+                        <div class="card-body">
+                            <h5 class="text-warning">Good Standing</h5>
+                            <p>The status of an LLC that has met all state requirements including annual reports, taxes, and other filings. Required for business operations.</p>
+                        </div>
+                    </div>
+
+                    <div class="card mb-3 border-0 shadow-sm">
+                        <div class="card-body">
+                            <h5 class="text-warning">Guaranteed Payments</h5>
+                            <p>Payments made to LLC members for services rendered, regardless of company profits. Treated as business expenses for tax purposes.</p>
+                        </div>
+                    </div>
+
+                    <div class="card mb-3 border-0 shadow-sm">
+                        <div class="card-body">
+                            <h5 class="text-warning">Income Allocation</h5>
+                            <p>The distribution of LLC profits and losses among members according to their ownership percentages or as specified in the operating agreement.</p>
+                        </div>
+                    </div>
+
+                    <div class="card mb-3 border-0 shadow-sm">
+                        <div class="card-body">
+                            <h5 class="text-warning">Indemnification</h5>
+                            <p>Legal protection for LLC members and managers against personal liability for actions taken on behalf of the company.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- J-L Terms -->
+                <div class="mb-5">
+                    <h2 class="mb-4">J - L</h2>
+                    
+                    <div class="card mb-3 border-0 shadow-sm">
+                        <div class="card-body">
+                            <h5 class="text-info">Joint and Several Liability</h5>
+                            <p>A legal concept where multiple parties can be held responsible for the full amount of a debt or obligation, not just their portion.</p>
+                        </div>
+                    </div>
+
+                    <div class="card mb-3 border-0 shadow-sm">
+                        <div class="card-body">
+                            <h5 class="text-info">Limited Liability</h5>
+                            <p>The protection that limits personal liability of LLC members to their investment in the company. Personal assets are generally protected from business debts.</p>
+                        </div>
+                    </div>
+
+                    <div class="card mb-3 border-0 shadow-sm">
+                        <div class="card-body">
+                            <h5 class="text-info">Limited Liability Company (LLC)</h5>
+                            <p>A business structure that combines the liability protection of a corporation with the tax benefits and flexibility of a partnership.</p>
+                        </div>
+                    </div>
+
+                    <div class="card mb-3 border-0 shadow-sm">
+                        <div class="card-body">
+                            <h5 class="text-info">Liquidation</h5>
+                            <p>The process of converting LLC assets to cash to pay creditors and distribute remaining funds to members upon dissolution.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- M-O Terms -->
+                <div class="mb-5">
+                    <h2 class="mb-4">M - O</h2>
+                    
+                    <div class="card mb-3 border-0 shadow-sm">
+                        <div class="card-body">
+                            <h5 class="text-danger">Manager</h5>
+                            <p>A person appointed to manage the LLC's business affairs. Can be a member or non-member. Management structure is defined in the operating agreement.</p>
+                        </div>
+                    </div>
+
+                    <div class="card mb-3 border-0 shadow-sm">
+                        <div class="card-body">
+                            <h5 class="text-danger">Member</h5>
+                            <p>An owner of an LLC. Members have ownership rights and may participate in management depending on the LLC structure.</p>
+                        </div>
+                    </div>
+
+                    <div class="card mb-3 border-0 shadow-sm">
+                        <div class="card-body">
+                            <h5 class="text-danger">Member-Managed LLC</h5>
+                            <p>An LLC where all members participate in management decisions. Most common structure for small LLCs.</p>
+                        </div>
+                    </div>
+
+                    <div class="card mb-3 border-0 shadow-sm">
+                        <div class="card-body">
+                            <h5 class="text-danger">Operating Agreement</h5>
+                            <p>A legal document that outlines how the LLC will be managed, including member rights, profit distribution, and decision-making procedures.</p>
+                        </div>
+                    </div>
+
+                    <div class="card mb-3 border-0 shadow-sm">
+                        <div class="card-body">
+                            <h5 class="text-danger">Organizer</h5>
+                            <p>The person or entity responsible for filing the Articles of Organization with the state. Can be a member, attorney, or formation service.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- P-R Terms -->
+                <div class="mb-5">
+                    <h2 class="mb-4">P - R</h2>
+                    
+                    <div class="card mb-3 border-0 shadow-sm">
+                        <div class="card-body">
+                            <h5 class="text-secondary">Pass-Through Taxation</h5>
+                            <p>The default tax treatment for LLCs where business income "passes through" to members' personal tax returns, avoiding double taxation.</p>
+                        </div>
+                    </div>
+
+                    <div class="card mb-3 border-0 shadow-sm">
+                        <div class="card-body">
+                            <h5 class="text-secondary">Piercing the Corporate Veil</h5>
+                            <p>A legal doctrine where courts disregard the LLC's separate legal status and hold members personally liable for business debts.</p>
+                        </div>
+                    </div>
+
+                    <div class="card mb-3 border-0 shadow-sm">
+                        <div class="card-body">
+                            <h5 class="text-secondary">Principal Place of Business</h5>
+                            <p>The primary location where the LLC conducts its business operations. Used for legal and tax purposes.</p>
+                        </div>
+                    </div>
+
+                    <div class="card mb-3 border-0 shadow-sm">
+                        <div class="card-body">
+                            <h5 class="text-secondary">Registered Agent</h5>
+                            <p>A person or company designated to receive legal documents on behalf of the LLC. Must have a physical address in the formation state.</p>
+                        </div>
+                    </div>
+
+                    <div class="card mb-3 border-0 shadow-sm">
+                        <div class="card-body">
+                            <h5 class="text-secondary">Reinstatement</h5>
+                            <p>The process of restoring an LLC to good standing after it has been administratively dissolved for non-compliance.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- S-U Terms -->
+                <div class="mb-5">
+                    <h2 class="mb-4">S - U</h2>
+                    
+                    <div class="card mb-3 border-0 shadow-sm">
+                        <div class="card-body">
+                            <h5 class="text-dark">S-Corporation Election</h5>
+                            <p>A tax election that allows an LLC to be taxed as an S-Corporation, potentially reducing self-employment taxes on distributions.</p>
+                        </div>
+                    </div>
+
+                    <div class="card mb-3 border-0 shadow-sm">
+                        <div class="card-body">
+                            <h5 class="text-dark">Self-Employment Tax</h5>
+                            <p>Social Security and Medicare taxes paid by business owners on their share of business income. Applies to LLC members under default taxation.</p>
+                        </div>
+                    </div>
+
+                    <div class="card mb-3 border-0 shadow-sm">
+                        <div class="card-body">
+                            <h5 class="text-dark">Single-Member LLC</h5>
+                            <p>An LLC with only one owner. Treated as a disregarded entity for federal tax purposes unless S-Corp election is made.</p>
+                        </div>
+                    </div>
+
+                    <div class="card mb-3 border-0 shadow-sm">
+                        <div class="card-body">
+                            <h5 class="text-dark">Statement of Information</h5>
+                            <p>An annual filing required in some states (like California) to update company information and maintain good standing.</p>
+                        </div>
+                    </div>
+
+                    <div class="card mb-3 border-0 shadow-sm">
+                        <div class="card-body">
+                            <h5 class="text-dark">Tax Classification</h5>
+                            <p>How the IRS treats an LLC for tax purposes. Options include disregarded entity, partnership, S-Corporation, or C-Corporation.</p>
+                        </div>
+                    </div>
+
+                    <div class="card mb-3 border-0 shadow-sm">
+                        <div class="card-body">
+                            <h5 class="text-dark">Unanimous Consent</h5>
+                            <p>Agreement by all LLC members on a particular decision. Required for certain major decisions unless otherwise specified in the operating agreement.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- V-Z Terms -->
+                <div class="mb-5">
+                    <h2 class="mb-4">V - Z</h2>
+                    
+                    <div class="card mb-3 border-0 shadow-sm">
+                        <div class="card-body">
+                            <h5 class="text-primary">Voting Rights</h5>
+                            <p>The right of LLC members to participate in company decisions. Typically proportional to ownership percentage unless modified in the operating agreement.</p>
+                        </div>
+                    </div>
+
+                    <div class="card mb-3 border-0 shadow-sm">
+                        <div class="card-body">
+                            <h5 class="text-primary">Winding Up</h5>
+                            <p>The process of settling LLC affairs before dissolution, including paying creditors, liquidating assets, and distributing remaining funds to members.</p>
+                        </div>
+                    </div>
+
+                    <div class="card mb-3 border-0 shadow-sm">
+                        <div class="card-body">
+                            <h5 class="text-primary">Withdrawal</h5>
+                            <p>The process of a member leaving the LLC. Procedures and consequences are typically outlined in the operating agreement.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Additional Resources -->
+                <div class="mb-5">
+                    <h2 class="mb-4">Additional Resources</h2>
+                    <div class="row">
+                        <div class="col-md-6 mb-4">
+                            <div class="card h-100 border-0 shadow-sm">
+                                <div class="card-header bg-success text-white">
+                                    <h5 class="mb-0">Related Guides</h5>
+                                </div>
+                                <div class="card-body">
+                                    <ul>
+                                        <li><a href="{{ url_for('llc_guide') }}" class="text-decoration-none">LLC Formation Guide</a></li>
+                                        <li><a href="{{ url_for('llc_vs_corp') }}" class="text-decoration-none">LLC vs Corporation</a></li>
+                                        <li><a href="{{ url_for('llc_tax_guide') }}" class="text-decoration-none">LLC Tax Guide</a></li>
+                                        <li><a href="{{ url_for('llc_compliance') }}" class="text-decoration-none">LLC Compliance</a></li>
+                                        <li><a href="{{ url_for('llc_faq') }}" class="text-decoration-none">LLC FAQ</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 mb-4">
+                            <div class="card h-100 border-0 shadow-sm">
+                                <div class="card-header bg-primary text-white">
+                                    <h5 class="mb-0">External Resources</h5>
+                                </div>
+                                <div class="card-body">
+                                    <ul>
+                                        <li><a href="https://www.irs.gov/businesses/small-businesses-self-employed/limited-liability-company-llc" target="_blank" rel="nofollow" class="text-decoration-none">IRS LLC Information</a></li>
+                                        <li><a href="https://www.sba.gov/business-guide/launch-your-business/choose-business-structure/limited-liability-company" target="_blank" rel="nofollow" class="text-decoration-none">SBA LLC Guide</a></li>
+                                        <li><a href="https://www.nolo.com/legal-encyclopedia/llc-basics" target="_blank" rel="nofollow" class="text-decoration-none">Nolo LLC Basics</a></li>
+                                        <li><a href="https://www.legalzoom.com/business/llc/llc-basics" target="_blank" rel="nofollow" class="text-decoration-none">LegalZoom LLC Basics</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Call to Action -->
+                <div class="text-center">
+                    <div class="card border-0 shadow-sm bg-primary text-white">
+                        <div class="card-body p-5">
+                            <h3 class="mb-3">Ready to Form Your LLC?</h3>
+                            <p class="mb-4">Now that you understand the terminology, use our directory to find trusted LLC formation services.</p>
+                            <a href="{{ url_for('index') }}" class="btn btn-warning btn-lg fw-bold">
+                                <i class="fas fa-search me-2"></i>Find LLC Services
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
