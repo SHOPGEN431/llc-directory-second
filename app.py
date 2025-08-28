@@ -10,7 +10,7 @@ app = Flask(__name__)
 # Global variable to store LLC data
 llc_data = None
 
-def load_llc_data(csv_file=r'LLC Data.csv'):
+def load_llc_data(csv_file=r'https://github.com/SHOPGEN431/llc-directory-second/blob/main/LLC%20Data.csv'):
     """Load LLC data from CSV file"""
     global llc_data
     try:
