@@ -17,3 +17,6 @@ print(f'\nTotal columns: {len(headers)}')
 
 
 
+
+
+
