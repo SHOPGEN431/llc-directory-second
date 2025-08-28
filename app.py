@@ -459,7 +459,3 @@ if __name__ == '__main__':
     load_llc_data()
     
     app.run(debug=True, host='0.0.0.0', port=5000)
-        @ a p p . r o u t e ( " / t e s t " )  
-         d e f   t e s t ( ) :  
-                 r e t u r n   " H e l l o   f r o m   F l a s k !   A p p   i s   w o r k i n g ! "  
- 
